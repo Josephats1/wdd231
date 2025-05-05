@@ -6,10 +6,20 @@
     <meta name="description" content="Course home page for WDD231 - Web Frontend Development">
     <meta name="author" content="Baluku Josephats">
     <title>WDD231 | Baluku Josephats</title>
+    
+    <!-- Preconnect to Google Fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- JavaScript Files -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
@@ -18,14 +28,14 @@
     <header class="main-header">
         <div class="header-content">
             <img src="images/jerry.png" alt="Site logo" class="logo">
-            <h1>Baluku Josephats</h1>
+            <h1 class="name">Baluku Josephats</h1>
             <button id="menu-button" aria-label="Navigation Menu" aria-expanded="false">☰</button>
         </div>
     </header>
     
     <nav class="main-nav">
         <ul class="navigation">
-            <li><a href="#" >Home</a></li>
+            <li><a href="#" class="active">Home</a></li>
             <li><a href="#">Chamber</a></li>
             <li><a href="#">Final</a></li>
             <li><a href="#">GitHub Profile</a></li>
@@ -34,11 +44,12 @@
     </nav>
     
     <main>
-        <h2 class="home">Home</h2>
-        <section class="hero">
+        <h1>Home</h1>
+        
+        <section class="hero" aria-labelledby="course-heading location-heading">
             <!-- Card 1 -->
             <div class="card card-1">
-                <h2>Course Work</h2>
+                <h2 id="course-heading">Course Work</h2>
                 <div class="card-content">
                     <ul class="course-list">
                         <li>• WDD 130: Web Fundamentals</li>
@@ -50,17 +61,17 @@
             
             <!-- Card 2 -->
             <div class="card card-2">
-                <h2>Masaka, Uganda</h2>
+                <h2 id="location-heading">Masaka, Uganda</h2>
                 <div class="card-content">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC74tEHXUb7lhikZBdStSqY-xsPw1xL08BdA&s" 
-                         alt="Baobab Trees landscape" class="location-img">
-                         <p id="wild">Masaka Wildlife</p>
+                         alt="Baobab Trees landscape in Masaka, Uganda" class="location-img">
+                    <p id="wild">Masaka Wildlife</p>
                 </div>
             </div>
         </section>
 
-        <section class="certificate">
-            <h2 class="card h2">Web and Computer Programming Certificate</h2>
+        <section class="certificate" aria-labelledby="certificate-heading">
+            <h2 class="course">Web and Computer Programming Certificate</h2>
             
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All</button>
@@ -104,10 +115,18 @@
                 <p>Total Credits: <span id="credit-total">18</span></p>
             </div>
         </section>
+
+        <section class="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About the Developer</h2>
+            <div class="card-content">
+                <p>Baluku Josephats is a web development student specializing in frontend technologies. Based in Masaka, Uganda, he is currently completing the Web and Computer Programming Certificate.</p>
+                <p>This portfolio showcases coursework and projects from WDD231 - Web Frontend Development.</p>
+            </div>
+        </section>
     </main>
 
     <footer class="main-footer">
-        <p>&copy;<span id="currentyear"></span> Baluku Josephats | Masaka, Uganda <img id="flag" src="images/jerry.png" alt="flag"></p>
+        <p>&copy;<span id="currentyear"></span> Baluku Josephats | Masaka, Uganda <img id="flag" src="images/flag.png" alt="Uganda flag"></p>
         <p id="lastModified"></p>
     </footer>
 </body>
