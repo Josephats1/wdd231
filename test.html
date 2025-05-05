@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Cards</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card h2 {
+      background-color: #007acc;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .card-content {
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .card-1 {
+      flex: 0 0 60%;
+    }
+
+    .card-1 p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .card-2 {
+      flex: 0 0 40%;
+    }
+
+    .card-2 .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-2 img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .card-1, .card-2 {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <!-- Card 1 -->
+    <div class="card card-1">
+      <h2>Course Work</h2>
+      <div class="card-content">
+        <ul style="list-style-type: none;">
+            <li>&#9632; </li>
+            <li>&#9632; </li>
+            <li>&#9632; </li>
+          </ul>
+          
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card card-2">
+      <h2>Masaka, Uganda</h2>
+      <div class="card-content">
+        <img src="images/bacbab-trees.jpg" alt="Baobab Trees landscape">
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+
+
+

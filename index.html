@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course home page for WDD231 - Web Frontend Development">
+    <meta name="author" content="Baluku Josephats">
+    <title>WDD231 | Baluku Josephats</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <img src="images/jerry.png" alt="Site logo" class="logo">
+            <h1>Baluku Josephats</h1>
+            <button id="menu-button" aria-label="Navigation Menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+    
+    <nav class="main-nav">
+        <ul class="navigation">
+            <li><a href="#" >Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+            <li><a href="#">GitHub Profile</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2 class="home">Home</h2>
+        <section class="hero">
+            <!-- Card 1 -->
+            <div class="card card-1">
+                <h2>Course Work</h2>
+                <div class="card-content">
+                    <ul class="course-list">
+                        <li>• WDD 130: Web Fundamentals</li>
+                        <li>• WDD 131: Dynamic Web Fundamentals</li>
+                        <li>• WDD 231: Frontend Development</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="card card-2">
+                <h2>Masaka, Uganda</h2>
+                <div class="card-content">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC74tEHXUb7lhikZBdStSqY-xsPw1xL08BdA&s" 
+                         alt="Baobab Trees landscape" class="location-img">
+                         <p id="wild">Masaka Wildlife</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="certificate">
+            <h2 class="card h2">Web and Computer Programming Certificate</h2>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cse">CSE</button>
+                <button class="filter-btn" data-filter="wdd">WDD</button>
+            </div>
+
+            <div class="course-grid">
+                <div class="course-card" data-course="cse110" data-completed="true">
+                    <h3>CSE 110</h3>
+                    <p>Programming Building Blocks</p>
+                    <span class="credits">3 credits</span>
+                </div>
+                <div class="course-card" data-course="wdd130" data-completed="true">
+                    <h3>WDD 130</h3>
+                    <p>Web Fundamentals</p>
+                    <span class="credits">3 credits</span>
+                </div>
+                <div class="course-card" data-course="cse111" data-completed="false">
+                    <h3>CSE 111</h3>
+                    <p>Programming with Functions</p>
+                    <span class="credits">3 credits</span>
+                </div>
+                <div class="course-card" data-course="cse210" data-completed="false">
+                    <h3>CSE 210</h3>
+                    <p>Programming with Classes</p>
+                    <span class="credits">3 credits</span>
+                </div>
+                <div class="course-card" data-course="wdd131" data-completed="false">
+                    <h3>WDD 131</h3>
+                    <p>Dynamic Web Fundamentals</p>
+                    <span class="credits">3 credits</span>
+                </div>
+                <div class="course-card" data-course="wdd231" data-completed="false">
+                    <h3>WDD 231</h3>
+                    <p>Frontend Development</p>
+                    <span class="credits">3 credits</span>
+                </div>
+            </div>
+            <div class="total-credits">
+                <p>Total Credits: <span id="credit-total">18</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy;<span id="currentyear"></span> Baluku Josephats | Masaka, Uganda <img id="flag" src="images/jerry.png" alt="flag"></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

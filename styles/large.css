@@ -1,0 +1,130 @@
+/**
+ * MEDIA QUERIES - RESPONSIVE ADJUSTMENTS
+ * Contains all styles that change at specific breakpoints
+ * Builds upon the base.css styles
+ */
+
+/* Tablet and Desktop Styles (768px and up) */
+@media (min-width: 768px) {
+    /* Base Typography Adjustments */
+    body {
+        font-size: 1.05rem;
+    }
+    
+    /* Header Adjustments */
+    .main-header {
+        padding: 0 2rem;
+    }
+    
+    .logo {
+        height: 60px;
+    }
+    
+    .main-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    /* Hide mobile menu button on desktop */
+    #menu-button {
+        display: none;
+    }
+    
+    /* Navigation - Switch to horizontal layout */
+    .main-nav {
+        display: block;
+        background-color: var(--nav-bg);
+    }
+    
+    .navigation {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .navigation li {
+        width: auto;
+        border-top: none;
+    }
+    
+    .navigation a {
+        text-align: center;
+        padding: 1rem 1.5rem;
+    }
+    
+    /* Home title adjustment */
+    .home {
+        margin-left: 2rem;
+    }
+    
+    /* Hero Section - Side by side cards */
+    .hero {
+        flex-direction: row;
+        padding: 2rem;
+    }
+    
+    .card-1 {
+        flex: 0 0 60%;
+    }
+    
+    .card-2 {
+        flex: 0 0 40%;
+    }
+    
+    /* Larger heading styles */
+    .card h2, .section-title {
+        padding: 1.2rem;
+        font-size: 1.5rem;
+    }
+    
+    /* Filter buttons adjustments */
+    .filter-buttons {
+        gap: 1rem;
+    }
+    
+    .filter-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .filter-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    /* Course grid - 3 columns on desktop */
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .course-card {
+        padding: 1.5rem;
+    }
+    
+    .course-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+}
+
+/* Mobile-specific adjustments (767px and below) */
+@media (max-width: 767px) {
+    /* Ensure cards stack vertically on mobile */
+    .hero {
+        flex-direction: column;
+    }
+    
+    .card-1, .card-2 {
+        flex: 0 0 100%;
+    }
+    
+    /* Slightly reduce padding on mobile */
+    .card-content {
+        padding: 1rem;
+    }
+    #flag{
+        margin-top: 2em;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+    }
+}
