@@ -1,121 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Responsive Cards</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      padding: 20px;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .card {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card h2 {
-      background-color: #007acc;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin: 0;
-      font-size: 1.5rem;
-    }
-
-    .card-content {
-      padding: 20px;
-      flex-grow: 1;
-    }
-
-    .card-1 {
-      flex: 0 0 60%;
-    }
-
-    .card-1 p {
-      margin-bottom: 15px;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    .card-2 {
-      flex: 0 0 40%;
-    }
-
-    .card-2 .card-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .card-2 img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-      }
-
-      .card-1, .card-2 {
-        flex: 0 0 100%;
-      }
-    }
-  </style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course home page for WDD231 - Web Frontend Development">
+    <meta name="author" content="Baluku Josephats">
+    <title>WDD231 | Baluku Josephats</title>
+    
+    <!-- Preconnect to Google Fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 768px)">
+    
+    <!-- JavaScript Files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
+    <header class="header">
+        <div class="container header__content">
+            <img src="images/jerry.png" alt="Site logo" class="logo">
+            <h1 class="site-title">Baluku Josephats</h1>
+            <button id="menu-button" aria-label="Navigation Menu" aria-expanded="false">☰</button>
+        </div>
+        
+        <nav class="nav" id="main-nav">
+            <ul class="nav__list container">
+                <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Chamber</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Final</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">GitHub Profile</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <h1 class="page-title">WDD231 - Web Frontend Development</h1>
+        
+        <section class="hero">
+            <article class="card card--primary">
+                <h2 class="card__header">Course Work</h2>
+                <div class="card__content">
+                    <ul class="course-list">
+                        <li class="course-list__item">WDD 130: Web Fundamentals</li>
+                        <li class="course-list__item">WDD 131: Dynamic Web Fundamentals</li>
+                        <li class="course-list__item">WDD 231: Frontend Development</li>
+                    </ul>
+                </div>
+            </article>
+            
+            <article class="card card--secondary">
+                <h2 class="card__header">Masaka, Uganda</h2>
+                <div class="card__content">
+                    <img src="https://via.placeholder.com/800x400" 
+                         alt="Baobab Trees landscape in Masaka, Uganda" 
+                         class="location-img">
+                    <p class="location-caption">Masaka Wildlife</p>
+                </div>
+            </article>
+        </section>
 
-  <section class="hero">
-    <!-- Card 1 -->
-    <div class="card card-1">
-      <h2>Course Work</h2>
-      <div class="card-content">
-        <ul style="list-style-type: none;">
-            <li>&#9632; </li>
-            <li>&#9632; </li>
-            <li>&#9632; </li>
-          </ul>
+        
+        <section class="certificate" aria-labelledby="certificate-heading">
+          <h2 class="card__header">Web and Computer Programming Certificate</h2>
           
-      </div>
-    </div>
+          <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="cse">CSE</button>
+              <button class="filter-btn" data-filter="wdd">WDD</button>
+          </div>
 
-    <!-- Card 2 -->
-    <div class="card card-2">
-      <h2>Masaka, Uganda</h2>
-      <div class="card-content">
-        <img src="images/bacbab-trees.jpg" alt="Baobab Trees landscape">
-      </div>
-    </div>
-  </section>
+          <div class="course-grid">
+              <div class="course-card" data-course="cse110" data-completed="true">
+                  <h3>CSE 110</h3>
+                  <p>Programming Building Blocks</p>
+                  <span class="credits">3 credits</span>
+              </div>
+              <div class="course-card" data-course="wdd130" data-completed="true">
+                  <h3>WDD 130</h3>
+                  <p>Web Fundamentals</p>
+                  <span class="credits">3 credits</span>
+              </div>
+              <div class="course-card" data-course="cse111" data-completed="false">
+                  <h3>CSE 111</h3>
+                  <p>Programming with Functions</p>
+                  <span class="credits">3 credits</span>
+              </div>
+              <div class="course-card" data-course="cse210" data-completed="false">
+                  <h3>CSE 210</h3>
+                  <p>Programming with Classes</p>
+                  <span class="credits">3 credits</span>
+              </div>
+              <div class="course-card" data-course="wdd131" data-completed="false">
+                  <h3>WDD 131</h3>
+                  <p>Dynamic Web Fundamentals</p>
+                  <span class="credits">3 credits</span>
+              </div>
+              <div class="course-card" data-course="wdd231" data-completed="false">
+                  <h3>WDD 231</h3>
+                  <p>Frontend Development</p>
+                  <span class="credits">3 credits</span>
+              </div>
+          </div>
+          <div class="total-credits">
+              <p>Total Credits: <span id="credit-total">18</span></p>
+          </div>
+      </section>
 
-</body>
+        <section class="about">
+            <h2 class="card__header">About the Developer</h2>
+            <div class="card__content">
+              <div class="about__content">
+                <div class="about__text">
+                 <h3>Hi, I'm Baluku Josephats.</h3>
+                  <p>I am a student at BYU. I am pursuing a Bachelor of Science in Software Engineering. I am also pursuing a Bachelor of Arts in Economics.</p>
+ degree.</p>
+                  <p>My passion for technology started at a young age when I was introduced to programming through the help of my parents. I have always been fascinated by the idea of creating something that can change the world.</p>
+                  <p>Currently, I am enrolled in the Web and Computer Programming Certificate program at MUST. I am excited to learn and grow in this field and contribute to the development of innovative web applications.</p>
+                  <p>Outside of academics, I enjoy spending time with my family and friends, exploring new places, and trying new foods. I am also a big fan of music and sports.</p>
+                  <p>Thank you for visiting my portfolio. I hope you find it informative and inspiring.</p>
+                </div>
+                <img id="developer" src="images/jerry.webp" alt="Developer portrait">
+              </div>
+            </div>
+        </section>
+      </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy;<span id="currentyear"></span> Baluku Josephats | Masaka, Uganda</p>
+            <img id="flag" src="images/flag.png" alt="Uganda flag">
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>     
 </html>
-
-
-
-

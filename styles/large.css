@@ -1,130 +1,127 @@
-/**
- * MEDIA QUERIES - RESPONSIVE ADJUSTMENTS
- * Contains all styles that change at specific breakpoints
- * Builds upon the base.css styles
- */
-
-/* Tablet and Desktop Styles (768px and up) */
+/* ===== MEDIA QUERIES ===== */
 @media (min-width: 768px) {
-    /* Base Typography Adjustments */
+    /* Typography */
     body {
-        font-size: 1.05rem;
+      font-size: 1.05rem;
     }
-    
-    /* Header Adjustments */
-    .main-header {
-        padding: 0 2rem;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
     }
-    
-    .logo {
-        height: 60px;
+  
+    h2 {
+      font-size: 2rem;
     }
-    
-    .main-header h1 {
-        font-size: 1.8rem;
+  
+    /* Header */
+    .header {
+      padding: 0.5rem 0;
     }
-    
-    /* Hide mobile menu button on desktop */
+  
+    .header__content {
+      padding: 0 2rem;
+    }
+  
+    .site-title {
+      font-size: 1.8rem;
+      text-align: left;
+      flex-grow: 0;
+    }
+  
     #menu-button {
-        display: none;
+      display: none;
     }
-    
-    /* Navigation - Switch to horizontal layout */
-    .main-nav {
-        display: block;
-        background-color: var(--nav-bg);
+  
+    /* Navigation */
+    .nav {
+      display: block;
+      background-color: var(--nav-bg);
     }
-    
-    .navigation {
-        flex-direction: row;
-        justify-content: center;
+  
+    .nav__list {
+      flex-direction: row;
+      justify-content: center;
     }
-    
-    .navigation li {
-        width: auto;
-        border-top: none;
+  
+    .nav__item {
+      width: auto;
+      border-top: none;
     }
-    
-    .navigation a {
-        text-align: center;
-        padding: 1rem 1.5rem;
+  
+    .nav__link {
+      padding: 1rem 1.5rem;
     }
-    
-    /* Home title adjustment */
-    .home {
-        margin-left: 2rem;
-    }
-    
-    /* Hero Section - Side by side cards */
+  
+    /* Hero Layout */
     .hero {
-        flex-direction: row;
-        padding: 2rem;
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
     }
-    
-    .card-1 {
-        flex: 0 0 60%;
+  
+    .card--primary {
+      flex: 0 0 60%;
     }
-    
-    .card-2 {
-        flex: 0 0 40%;
+  
+    .card--secondary {
+      flex: 0 0 40%;
     }
-    
-    /* Larger heading styles */
-    .card h2, .section-title {
-        padding: 1.2rem;
-        font-size: 1.5rem;
-    }
-    
-    /* Filter buttons adjustments */
-    .filter-buttons {
-        gap: 1rem;
-    }
-    
-    .filter-btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-    }
-    
-    .filter-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    
-    /* Course grid - 3 columns on desktop */
+  
+    /* Course Grid */
     .course-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
     }
-    
-    .course-card {
-        padding: 1.5rem;
-    }
-    
+  
     .course-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-}
-
-/* Mobile-specific adjustments (767px and below) */
-@media (max-width: 767px) {
-    /* Ensure cards stack vertically on mobile */
-    .hero {
-        flex-direction: column;
+  
+    /* Filter Buttons */
+    .filter-btn {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
     }
-    
-    .card-1, .card-2 {
-        flex: 0 0 100%;
+  
+    .filter-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
-    
-    /* Slightly reduce padding on mobile */
-    .card-content {
-        padding: 1rem;
+  
+    /* About Section */
+    .about__content {
+      flex-direction: row;
+      align-items: center;
+      gap: 3rem;
     }
-    #flag{
-        margin-top: 2em;
-        text-align: center;
-        justify-content: center;
-        align-content: center;
+  
+    #developer {
+      height: 250px;
+      width: 250px;
+      margin: 0;
+      order: 2;
     }
-}
+  
+    .about__text {
+      order: 1;
+    }
+  
+    /* Footer */
+    .footer p {
+      display: inline;
+    }
+  
+    #flag {
+      margin-left: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* Mobile-specific adjustments */
+    #flag {
+      display: block;
+      margin: 0.5rem auto 0;
+    }
+  }
