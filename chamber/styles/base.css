@@ -155,8 +155,9 @@ header {
   align-items: center;
 }
 .logo-group img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
 }
 .brand-name {
   font-size: 1.2rem;
