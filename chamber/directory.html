@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Masaka Chamber of Commerce - Promoting local businesses and economic growth in the Masaka region. Join us to network, grow, and strengthen our community." />
+        <meta name="author" content="Masaka Chamber of Commerce" />
+        
+        <!-- Facebook Meta Tags -->
+        <meta property="og:title" content="Masaka Chamber of Commerce" />
+        <meta property="og:description" content="Promoting local businesses and economic growth in the Masaka region. Join us to network, grow, and strengthen our community." />
+        <meta property="og:image" content="https://yourwebsite.com/images/masaka-chamber-social.jpg" />
+        <meta property="og:url" content="https://yourwebsite.com/" />
+        <meta property="og:type" content="website" />
+        
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+      
+        <title>Masaka Chamber of Commerce | Promoting Local Business Growth</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="normalise.css">
+        <link rel="stylesheet" href="styles/base.css" />
+        <script defer src="scripts/main.js"></script>
+        <script src="scripts/directory.js"></script>
+        <script src="data/members.json"></script>
+      </head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <div class="logo-group">
+        <img src="https://via.placeholder.com/40" alt="Logo">
+        <h1 class="brand-name">Timbbukti<br>
+          <span id="name">Chamber of Commerce</span></h1>
+       
+      </div>
+      <nav class="desktop-nav">
+        <a href="#">Home</a>
+        <a href="#">Directory</a>
+        <a href="#">Join</a>
+        <a href="#">Discover</a>
+      </nav>
+      <div class="right-group">
+        <button id="theme-toggle">🌓</button>
+        <button id="menu-toggle" class="hamburger">&#9776;</button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#">Home</a>
+      <a href="#">Directory</a>
+      <a href="#">Join</a>
+      <a href="#">Discover</a>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+        <h1><span class="note">Welcome to</span><br>
+          Masaka City</h1>
+    </div>
+    
+    <div class="ticket-badge">
+      <div class="ticket-header">
+          <span class="event-type">VIP ACCESS</span>
+          <h3>Meet & Trade 2024</h3>
+      </div>
+      <div class="ticket-price">
+          <span class="price-currency">$</span>
+          <span class="price-amount">199</span>
+          <span class="price-label">/person</span>
+      </div>
+      <ul class="ticket-highlights">
+          <li>Exclusive networking</li>
+          <li>VIP lounge access</li>
+          <li>Speaker meet & greet</li>
+      </ul>
+      <div class="ticket-cta">
+          <a href="#" class="btn">Reserve Your Spot</a>
+          <span class="limited-text">Limited tickets remaining</span>
+      </div>
+  </div>
+</section>
+<div class="dashboard">
+  <!-- Event Card -->
+  <div class="card event-card">
+      <div class="card-header">
+          <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Tech Conference">
+          <div class="event-date">
+              <span class="event-day">15</span>
+              <span class="event-month">Jun</span>
+          </div>
+      </div>
+      <div class="event-body">
+          <h2 class="event-title">Tech Conference 2023</h2>
+          <div class="event-meta">
+              <div class="meta-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>San Francisco</span>
+              </div>
+              <div class="meta-item">
+                  <i class="fas fa-clock"></i>
+                  <span>2:00 PM</span>
+              </div>
+          </div>
+          <p class="event-description">
+              Join the most anticipated tech event of the year featuring industry leaders and innovative startups.
+          </p>
+          <div class="event-footer">
+              <div class="event-price">
+                  $199 <span>/ ticket</span>
+              </div>
+              <button class="event-button">
+                  Get Tickets <i class="fas fa-arrow-right"></i>
+              </button>
+          </div>
+      </div>
+  </div>
+
+  <!-- Current Weather Card -->
+  <div class="card weather-card">
+      <div class="card-header">
+          <i class="fas fa-cloud-sun"></i>
+          <h2 class="card-title">Current Weather</h2>
+      </div>
+      <div class="card-body">
+          <div class="weather-icon">
+              <i class="fas fa-cloud-sun"></i>
+          </div>
+          <div class="temperature">75°F</div>
+          <div class="condition">Partly Cloudy</div>
+          <div class="weather-grid">
+              <div class="weather-item">
+                  <i class="fas fa-temperature-high"></i>
+                  <div>
+                      <div class="weather-value">85°</div>
+                      <div class="weather-label">High</div>
+                  </div>
+              </div>
+              <div class="weather-item">
+                  <i class="fas fa-temperature-low"></i>
+                  <div>
+                      <div class="weather-value">52°</div>
+                      <div class="weather-label">Low</div>
+                  </div>
+              </div>
+              <div class="weather-item">
+                  <i class="fas fa-droplet"></i>
+                  <div>
+                      <div class="weather-value">34%</div>
+                      <div class="weather-label">Humidity</div>
+                  </div>
+              </div>
+              <div class="weather-item">
+                  <i class="fas fa-sun"></i>
+                  <div>
+                      <div class="weather-value">7:30am</div>
+                      <div class="weather-label">Sunrise</div>
+                  </div>
+              </div>
+              <div class="weather-item">
+                  <i class="fas fa-moon"></i>
+                  <div>
+                      <div class="weather-value">9:59pm</div>
+                      <div class="weather-label">Sunset</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Forecast Card -->
+  <div class="card">
+      <div class="card-header">
+          <i class="fas fa-calendar-days"></i>
+          <h2 class="card-title">Weather Forecast</h2>
+      </div>
+      <div class="forecast-list">
+          <div class="forecast-item">
+              <div class="forecast-day">
+                  <div class="forecast-icon">
+                      <i class="fas fa-sun"></i>
+                  </div>
+                  <span class="day-name">Today</span>
+              </div>
+              <span class="day-temp">90°F</span>
+          </div>
+          <div class="forecast-item">
+              <div class="forecast-day">
+                  <div class="forecast-icon">
+                      <i class="fas fa-cloud-sun"></i>
+                  </div>
+                  <span class="day-name">Wednesday</span>
+              </div>
+              <span class="day-temp">89°F</span>
+          </div>
+          <div class="forecast-item">
+              <div class="forecast-day">
+                  <div class="forecast-icon">
+                      <i class="fas fa-cloud-rain"></i>
+                  </div>
+                  <span class="day-name">Thursday</span>
+              </div>
+              <span class="day-temp">68°F</span>
+          </div>
+      </div>
+  </div>
+</div>
+<h1>Business Directory</h1>
+    
+<div class="controls">
+    <input type="text" class="search-box" placeholder="Search businesses..." id="searchInput">
+    <select class="filter-select" id="membershipFilter">
+        <option value="all">All Memberships</option>
+        <option value="1">Basic Members</option>
+        <option value="2">Silver Members</option>
+        <option value="3">Gold Members</option>
+    </select>
+</div>
+
+<div class="business-container" id="businessDirectory">
+    <div class="loading">Loading businesses...</div>
+</div>
+
+  
+<footer>
+    <script src="data/members.json"></script>
+    <div class="footer-content">
+        <div class="footer-contact">
+            <h3>Masaka Chamber of Commerce</h3>
+            <p>10 Rue De La Paix<br>
+            Masaka, Mali 999</p>
+            <p>info@Masakacc.org</p>
+            <p>(223) 555-2300</p>
+        </div>
+        
+        <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        
+        <div class="footer-meta">
+            <p>WDD231 Class Project<br>
+            Marie Martinez</p>
+            <p>© <span id="copyright-year">20xx</span> Masaka Chamber of Commerce</p>
+            <p>Last Modification: <span id="last-modified">10/21/202X 22:12:35</span></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
