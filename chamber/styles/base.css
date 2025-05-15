@@ -196,7 +196,8 @@ header {
 .desktop-nav a {
   text-decoration: none;
   color: var(--success);
-  font-weight: 500;
+  font-weight: bold;
+  transition: color 0.3s
 }
 
 .desktop-nav a:hover {
@@ -241,7 +242,7 @@ header {
   height: 80vh;
   min-height: 400px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                  url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4');
+                  url('https://images.unsplash.com/photo-1496588152823-86ff7695e68f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmV3JTIweW9yayUyMGNpdHl8ZW58MHx8MHx8fDA%3D');
   background-size: cover;
   background-position: center;
   color: white;
@@ -743,8 +744,8 @@ h1 {
 }
 
 .business-logo {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 12px;
   object-fit: contain;
   box-shadow: 4px 4px 8px var(--shadow-dark),
@@ -770,13 +771,13 @@ h1 {
 
 .business-info i {
   width: 20px;
-  color: var(--directory-primary);
+  color: var(--accent-light);
   text-align: center;
 }
 
 .membership-badge {
   position: absolute;
-  top: 1.5rem;
+  top: 0.5rem;
   right: 1.5rem;
   padding: 0.3rem 0.8rem;
   border-radius: 50px;
@@ -901,6 +902,8 @@ footer {
 .footer-social {
   display: flex;
   gap: 20px;
+  width: 50px;
+  height: 50px;
 }
 
 .footer-social a {
@@ -1015,3 +1018,4 @@ footer {
 .dark-mode header {
   background-color: var(--gray-800);
 }
+
