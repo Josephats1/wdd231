@@ -144,7 +144,24 @@
   margin: 0;
   padding: 0;
 }
+.theme-icon {
+  margin-right: 2em;
+  fill: none;
+  stroke: currentColor;
+}
 
+.moon-icon {
+  display: none;
+}
+
+/* Optional: If using a dark/light mode system */
+.dark-mode .sun-icon {
+  display: none;
+}
+
+.dark-mode .moon-icon {
+  display: block;
+}
 body {
   font-family: Arial, sans-serif;
   transition: background 0.3s, color 0.3s;
@@ -947,7 +964,9 @@ footer {
     top: auto;
     bottom: 80px;
   }
-
+.theme-icon{
+  margin: 0%;
+}
   /* Dashboard */
   .dashboard {
     grid-template-columns: 1fr;

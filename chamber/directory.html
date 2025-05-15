@@ -46,20 +46,19 @@
         <a href="#">Discover</a>
       </nav>
       <div class="right-group">
-     <button id="theme-toggle" aria-label="Toggle color theme">
-  <svg xmlns="http://www.w3.org/2000/svg" class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <circle cx="12" cy="12" r="5"></circle>
-    <line x1="12" y1="1" x2="12" y2="3"></line>
-    <line x1="12" y1="21" x2="12" y2="23"></line>
-    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-    <line x1="1" y1="12" x2="3" y2="12"></line>
-    <line x1="21" y1="12" x2="23" y2="12"></line>
-    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    <button id="theme-toggle" aria-label="Toggle light and dark theme">
+  <!-- Sun icon (visible by default) -->
+  <svg class="theme-icon sun-icon" width="24" height="24" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="5" />
+    <line x1="12" y1="1" x2="12" y2="3" stroke-width="2" />
+    <line x1="12" y1="21" x2="12" y2="23" stroke-width="2" />
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke-width="2" />
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke-width="2" />
   </svg>
-  <svg xmlns="http://www.w3.org/2000/svg" class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  
+  <!-- Moon icon (hidden by CSS) -->
+  <svg class="theme-icon moon-icon" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
   </svg>
 </button>
         <button id="menu-toggle" class="hamburger">&#9776;</button>
@@ -104,7 +103,7 @@
   <!-- Event Card -->
   <div class="card event-card">
       <div class="card-header">
-          <img src="https://www.wallpapers13.com/wp-content/uploads/2016/02/Singapore-High-Quality-and-Resolution-3840x2160-840x525.jpg" alt="Tech Conference">
+          <img src="images/bus.png" alt="Tech Conference">
           <div class="event-date">
               <span class="event-day">15</span>
               <span class="event-month">Jun</span>
