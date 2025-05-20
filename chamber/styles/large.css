@@ -987,14 +987,14 @@ footer {
 }
 
 .footer-social a {
-  color: var(--text-primary);
+  color: var(--accent-light);
   font-size: 24px;
+  width: 50px;
+  height: 50px;
   transition: color 0.3s;
 }
 
-.footer-social a:hover {
-  color: var(--primary);
-}
+
 
 .footer-meta {
   text-align: right;
