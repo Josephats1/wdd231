@@ -1,0 +1,308 @@
+<div class="weather-section">
+  <!-- Current Weather Card -->
+  <div class="card weather-card">
+    <div class="card-header">
+      <i class="fas fa-cloud-sun"></i>
+      <h2 class="card-title">Current Weather</h2>
+    </div>
+    <div class="card-body">
+      <div class="weather-icon" id="current-icon">
+        <i class="fas fa-question"></i>
+      </div>
+      <div class="temperature" id="current-temp">--°F</div>
+      <div class="condition" id="current-desc">Loading...</div>
+      <div class="weather-grid">
+        <div class="weather-item">
+          <i class="fas fa-temperature-high"></i>
+          <div>
+            <div class="weather-value" id="high-temp">--°</div>
+            <div class="weather-label">High</div>
+          </div>
+        </div>
+        <div class="weather-item">
+          <i class="fas fa-temperature-low"></i>
+          <div>
+            <div class="weather-value" id="low-temp">--°</div>
+            <div class="weather-label">Low</div>
+          </div>
+        </div>
+        <div class="weather-item">
+          <i class="fas fa-droplet"></i>
+          <div>
+            <div class="weather-value" id="humidity">--%</div>
+            <div class="weather-label">Humidity</div>
+          </div>
+        </div>
+        <div class="weather-item">
+          <i class="fas fa-wind"></i>
+          <div>
+            <div class="weather-value" id="wind-speed">-- mph</div>
+            <div class="weather-label">Wind</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forecast Card -->
+  <div class="card forecast-card">
+    <div class="card-header">
+      <i class="fas fa-calendar-days"></i>
+      <h2 class="card-title">3-Day Forecast</h2>
+    </div>
+    <div class="forecast-list" id="forecast-container">
+      <div class="loading">Loading forecast data...</div>
+    </div>
+  </div>
+</div>
+
+<div id="api-status" style="color: red; margin-top: 10px;"></div>
+
+<script>
+  // Configuration
+  const API_KEY = '99b9abb856aaf2055634a6204bbcfde2';
+  const CITY = 'Masaka';
+  const COUNTRY = 'UG';
+  const UNITS = 'imperial';
+  
+  // DOM Elements
+  const currentTempEl = document.getElementById('current-temp');
+  const currentDescEl = document.getElementById('current-desc');
+  const currentIconEl = document.getElementById('current-icon');
+  const highTempEl = document.getElementById('high-temp');
+  const lowTempEl = document.getElementById('low-temp');
+  const humidityEl = document.getElementById('humidity');
+  const windSpeedEl = document.getElementById('wind-speed');
+  const forecastContainerEl = document.getElementById('forecast-container');
+  const apiStatusEl = document.getElementById('api-status');
+
+  // Weather Icons Mapping
+  const weatherIcons = {
+    '01d': 'fas fa-sun',
+    '01n': 'fas fa-moon',
+    '02d': 'fas fa-cloud-sun',
+    '02n': 'fas fa-cloud-moon',
+    '03d': 'fas fa-cloud',
+    '03n': 'fas fa-cloud',
+    '04d': 'fas fa-cloud',
+    '04n': 'fas fa-cloud',
+    '09d': 'fas fa-cloud-rain',
+    '09n': 'fas fa-cloud-rain',
+    '10d': 'fas fa-cloud-sun-rain',
+    '10n': 'fas fa-cloud-moon-rain',
+    '11d': 'fas fa-bolt',
+    '11n': 'fas fa-bolt',
+    '13d': 'fas fa-snowflake',
+    '13n': 'fas fa-snowflake',
+    '50d': 'fas fa-smog',
+    '50n': 'fas fa-smog'
+  };
+
+  // Fetch Weather Data with error handling
+  async function fetchWeatherData() {
+    apiStatusEl.textContent = 'Fetching weather data...';
+    
+    try {
+      // Current Weather
+      const currentUrl = `https://api.openweathermap.org/data/2.5/weather?q=${CITY},${COUNTRY}&units=${UNITS}&appid=${API_KEY}`;
+      apiStatusEl.textContent = `Fetching: ${currentUrl}`;
+      
+      const currentResponse = await fetch(currentUrl);
+      
+      if (!currentResponse.ok) {
+        throw new Error(`HTTP error! status: ${currentResponse.status}`);
+      }
+      
+      const currentData = await currentResponse.json();
+      apiStatusEl.textContent = 'Current data loaded successfully';
+      
+      // Forecast
+      const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY},${COUNTRY}&units=${UNITS}&appid=${API_KEY}`;
+      const forecastResponse = await fetch(forecastUrl);
+      
+      if (!forecastResponse.ok) {
+        throw new Error(`HTTP error! status: ${forecastResponse.status}`);
+      }
+      
+      const forecastData = await forecastResponse.json();
+      apiStatusEl.textContent = 'Forecast data loaded successfully';
+      
+      updateCurrentWeather(currentData);
+      updateForecast(forecastData);
+      
+    } catch (error) {
+      console.error('Error fetching weather data:', error);
+      apiStatusEl.textContent = `Error: ${error.message}`;
+      currentDescEl.textContent = 'Weather data unavailable';
+      forecastContainerEl.innerHTML = '<div class="error">Failed to load forecast. Please try again later.</div>';
+    }
+  }
+
+  // Update Current Weather
+  function updateCurrentWeather(data) {
+    console.log('Current weather data:', data);
+    currentTempEl.textContent = `${Math.round(data.main.temp)}°F`;
+    currentDescEl.textContent = data.weather[0].description;
+    highTempEl.textContent = `${Math.round(data.main.temp_max)}°`;
+    lowTempEl.textContent = `${Math.round(data.main.temp_min)}°`;
+    humidityEl.textContent = `${data.main.humidity}%`;
+    windSpeedEl.textContent = `${Math.round(data.wind.speed)} mph`;
+    
+    const iconCode = data.weather[0].icon;
+    currentIconEl.innerHTML = `<i class="${weatherIcons[iconCode] || 'fas fa-question'}"></i>`;
+  }
+
+  // Update Forecast
+  function updateForecast(data) {
+    console.log('Forecast data:', data);
+    forecastContainerEl.innerHTML = '';
+    
+    if (!data.list || data.list.length === 0) {
+      forecastContainerEl.innerHTML = '<div class="error">No forecast data available</div>';
+      return;
+    }
+    
+    // Get noon forecasts for next 3 days
+    const dailyForecasts = data.list.filter(item => {
+      const date = new Date(item.dt * 1000);
+      return date.getHours() >= 11 && date.getHours() <= 13;
+    }).slice(0, 3);
+    
+    if (dailyForecasts.length === 0) {
+      forecastContainerEl.innerHTML = '<div class="error">Could not process forecast data</div>';
+      return;
+    }
+    
+    dailyForecasts.forEach(day => {
+      const date = new Date(day.dt * 1000);
+      const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
+      const iconCode = day.weather[0].icon;
+      
+      const forecastItem = document.createElement('div');
+      forecastItem.className = 'forecast-item';
+      forecastItem.innerHTML = `
+        <div class="forecast-day">
+          <div class="forecast-icon">
+            <i class="${weatherIcons[iconCode] || 'fas fa-question'}"></i>
+          </div>
+          <span class="day-name">${dayName}</span>
+        </div>
+        <span class="day-temp">${Math.round(day.main.temp)}°F</span>
+      `;
+      
+      forecastContainerEl.appendChild(forecastItem);
+    });
+  }
+
+  // Initialize
+  document.addEventListener('DOMContentLoaded', fetchWeatherData);
+</script>
+
+<style>
+  .weather-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 768px) {
+    .weather-section {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .weather-card .weather-icon i {
+    font-size: 3.5rem;
+    color: #f39c12;
+    margin: 15px 0;
+  }
+
+  .temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #2c3e50;
+  }
+
+  .condition {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+    text-transform: capitalize;
+  }
+
+  .weather-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .weather-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .weather-item i {
+    font-size: 1.3rem;
+    color: #3498db;
+  }
+
+  .weather-value {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  .weather-label {
+    font-size: 0.8rem;
+    color: #95a5a6;
+  }
+
+  .forecast-list {
+    padding: 10px;
+  }
+
+  .forecast-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ecf0f1;
+  }
+
+  .forecast-item:last-child {
+    border-bottom: none;
+  }
+
+  .forecast-day {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .forecast-icon i {
+    font-size: 1.5rem;
+    color: #f39c12;
+  }
+
+  .day-name {
+    font-weight: 500;
+    color: #2c3e50;
+  }
+
+  .day-temp {
+    font-weight: bold;
+    color: #e74c3c;
+  }
+
+  .loading, .error {
+    padding: 20px;
+    text-align: center;
+    color: #7f8c8d;
+  }
+
+  .error {
+    color: #e74c3c;
+  }
+</style>

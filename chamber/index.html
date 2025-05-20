@@ -23,12 +23,12 @@
   <title>Masaka Chamber of Commerce | Promoting Local Business Growth</title>
 
   <!-- CSS (validated) -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="styles/base.css">
+
   <link rel="stylesheet" href="styles/large.css">
 
   <!-- JavaScript -->
-  <script defer src="scripts/main.js"></script>
   <script defer src="scripts/directory.js"></script>
 </head>
 <body>
@@ -73,45 +73,42 @@
       <a href="#">Discover</a>
     </div>
   </header>
-  <section class="hero">
+<section class="hero">
+  <!-- Background image -->
+  <!-- HTML -->
+<div class="hero-bg"></div>
+
+  
+  <!-- Glassmorphic triangle container -->
+  <div class="hero-glass-container">
     <div class="hero-content">
-        <h1><span class="note">Welcome to</span><br>
-          Masaka City</h1>
+      <span class="hero-subtitle">Explore Uganda's Hidden Gem</span>
+      <h1>Discover <span>Masaka</span></h1>
+      <p class="hero-description">Immerse yourself in the vibrant culture and breathtaking landscapes of Central Uganda's most charming city.</p>
+      
+      <div class="hero-cta">
+        <a href="#" class="glass-btn">
+          <span class="btn-text">Begin Your Journey</span>
+          <span class="btn-icon">→</span>
+          <span class="btn-glare"></span>
+        </a>
+        <span class="cta-note">Limited tours available</span>
+      </div>
     </div>
-    
-    <div class="ticket-badge">
-      <div class="ticket-header">
-          <span class="event-type">VIP ACCESS</span>
-          <h3>Forex & Crypto Seminar  2025</h3>
-      </div>
-      <div class="ticket-price">
-          <span class="price-currency">$</span>
-          <span class="price-amount">199</span>
-          <span class="price-label">/person</span>
-      </div>
-      <ul class="ticket-highlights">
-          <li>Exclusive networking</li>
-          <li>VIP lounge access</li>
-          <li>Speaker meet & greet</li>
-      </ul>
-      <div class="ticket-cta">
-          <a href="#" class="btn">Reserve Your Spot</a>
-          <span class="limited-text">Limited Tickets In Store</span>
-      </div>
   </div>
 </section>
 <div class="dashboard">
   <!-- Event Card -->
   <div class="card event-card">
       <div class="card-header">
-          <img src="images/business.webp" alt="Tech Conference">
+          <img src="images/fx.png" alt="Tech Conference">
           <div class="event-date">
-              <span class="event-day">15</span>
-              <span class="event-month">Jun</span>
+              <span class="event-day">25</span>
+              <span class="event-month">June</span>
           </div>
       </div>
       <div class="event-body">
-          <h2 class="event-title">Tech Conference 2025</h2>
+          <h2 class="event-title">Forex & Crypto Seminar 2025</h2>
           <div class="event-meta">
               <div class="meta-item">
                   <i class="fas fa-map-marker-alt"></i>
@@ -119,113 +116,92 @@
               </div>
               <div class="meta-item">
                   <i class="fas fa-clock"></i>
-                  <span>2:00 PM</span>
+                  <span>10:00 AM</span>
               </div>
           </div>
+          <div class="meta-item">
+                  <i class="fas fa-utensils"></i> 
+                  <span>Free Lunch</span>
+              </div>
           <p class="event-description">
-              Join the most anticipated tech event of the year featuring industry leaders and innovative startups.
+              Join the most anticipated Financial event of the year featuring industry leaders and EA trading strategies.
           </p>
           <div class="event-footer">
               <div class="event-price">
-                  $199 <span>/ ticket</span>
+                  $159 <span>/ ticket</span>
               </div>
               <button class="event-button">
                   Get Tickets <i class="fas fa-arrow-right"></i>
               </button>
           </div>
+          <p class="sponsors">
+  <span>Sponsored by:</span>
+  <img src="images/bina.png" alt="Binance" class="sponsor-logo">
+  <img src="images/xm.png" alt="XM" class="sponsor-logo">
+  <img src="images/fnt.png" alt="FundedNext" class="sponsor-logo">
+</p>
+
       </div>
   </div>
 
-  <!-- Current Weather Card -->
+    <!-- Current Weather Card -->
   <div class="card weather-card">
-      <div class="card-header">
-          <i class="fas fa-cloud-sun"></i>
-          <h2 class="card-title">Current Weather</h2>
+    <div class="card-header">
+      <i class="fas fa-cloud-sun"></i>
+      <h2 class="card-title">Current Weather</h2>
+    </div>
+    <div class="card-body">
+      <div class="weather-icon" id="current-icon">
+        <i class="fas fa-question"></i>
       </div>
-      <div class="card-body">
-          <div class="weather-icon">
-              <i class="fas fa-cloud-sun"></i>
+      <div class="temperature" id="current-temp">--°F</div>
+      <div class="condition" id="current-desc">Loading...</div>
+      <div class="weather-grid">
+        <div class="weather-item">
+          <i class="fas fa-temperature-high"></i>
+          <div>
+            <div class="weather-value" id="high-temp">--°</div>
+            <div class="weather-label">High</div>
           </div>
-          <div class="temperature">75°F</div>
-          <div class="condition">Partly Cloudy</div>
-          <div class="weather-grid">
-              <div class="weather-item">
-                  <i class="fas fa-temperature-high"></i>
-                  <div>
-                      <div class="weather-value">85°</div>
-                      <div class="weather-label">High</div>
-                  </div>
-              </div>
-              <div class="weather-item">
-                  <i class="fas fa-temperature-low"></i>
-                  <div>
-                      <div class="weather-value">52°</div>
-                      <div class="weather-label">Low</div>
-                  </div>
-              </div>
-              <div class="weather-item">
-                  <i class="fas fa-droplet"></i>
-                  <div>
-                      <div class="weather-value">34%</div>
-                      <div class="weather-label">Humidity</div>
-                  </div>
-              </div>
-              <div class="weather-item">
-                  <i class="fas fa-sun"></i>
-                  <div>
-                      <div class="weather-value">7:30am</div>
-                      <div class="weather-label">Sunrise</div>
-                  </div>
-              </div>
-             
+        </div>
+        <div class="weather-item">
+          <i class="fas fa-temperature-low"></i>
+          <div>
+            <div class="weather-value" id="low-temp">--°</div>
+            <div class="weather-label">Low</div>
           </div>
+        </div>
+        <div class="weather-item">
+          <i class="fas fa-droplet"></i>
+          <div>
+            <div class="weather-value" id="humidity">--%</div>
+            <div class="weather-label">Humidity</div>
+          </div>
+        </div>
+        <div class="weather-item">
+          <i class="fas fa-wind"></i>
+          <div>
+            <div class="weather-value" id="wind-speed">-- mph</div>
+            <div class="weather-label">Wind</div>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 
   <!-- Forecast Card -->
-  <div class="card">
-      <div class="card-header">
-          <i class="fas fa-calendar-days"></i>
-          <h2 class="card-title">Weather Forecast</h2>
-      </div>
-      <div class="forecast-list">
-          <div class="forecast-item">
-              <div class="forecast-day">
-                  <div class="forecast-icon">
-                      <i class="fas fa-sun"></i>
-                  </div>
-                  <span class="day-name">Today</span>
-              </div>
-              <span class="day-temp">90°F</span>
-          </div>
-          <div class="forecast-item">
-              <div class="forecast-day">
-                  <div class="forecast-icon">
-                      <i class="fas fa-cloud-sun"></i>
-                  </div>
-                  <span class="day-name">Wednesday</span>
-              </div>
-              <span class="day-temp">89°F</span>
-          </div>
-          <div class="forecast-item">
-              <div class="forecast-day">
-                  <div class="forecast-icon">
-                      <i class="fas fa-cloud-rain"></i>
-                  </div>
-                  <span class="day-name">Thursday</span>
-              </div>
-              <span class="day-temp">68°F</span>
-          </div>
-          <div class="weather-item">
-                  <i class="fas fa-moon"></i>
-                  <div>
-                      <div class="weather-value">9:59pm</div>
-                      <div class="weather-label">Sunset</div>
-                  </div>
-              </div>
-      </div>
+  <div class="card forecast-card">
+    <div class="card-header">
+      <i class="fas fa-calendar-days"></i>
+      <h2 class="card-title">3-Day Forecast</h2>
+    </div>
+    <div class="forecast-list" id="forecast-container">
+      <div class="loading">Loading forecast data...</div>
+    </div>
   </div>
 </div>
+<div id="api-status" ></div>
+
 <h1>Business Directory</h1>
     
 <div class="controls">
@@ -269,4 +245,3 @@
 </footer>
 </body>
 </html>
-
