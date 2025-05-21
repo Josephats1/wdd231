@@ -1,24 +1,24 @@
 // Configuration
-  const API_KEY = '4de0b0eeda3c4b3d00a943f3b43d016b';
-  const CITY = 'Masaka';
-  const COUNTRY = 'UG';
-  const UNITS = 'imperial';
-  
-  // DOM Elements
-  const currentTempEl = document.getElementById('current-temp');
-  const currentDescEl = document.getElementById('current-desc');
-  const currentIconEl = document.getElementById('current-icon');
-  const highTempEl = document.getElementById('high-temp');
-  const lowTempEl = document.getElementById('low-temp');
-  const humidityEl = document.getElementById('humidity');
-  const windSpeedEl = document.getElementById('wind-speed');
-  const forecastContainerEl = document.getElementById('forecast-container');
-  const apiStatusEl = document.getElementById('api-status');
+const API_KEY = '4de0b0eeda3c4b3d00a943f3b43d016b';
+const CITY = 'Masaka';
+const COUNTRY = 'UG';
+const UNITS = 'imperial';
 
-  // Updated Weather Icons Mapping with fallbacks
+// DOM Elements
+const currentTempEl = document.getElementById('current-temp');
+const currentDescEl = document.getElementById('current-desc');
+const currentIconEl = document.getElementById('current-icon');
+const highTempEl = document.getElementById('high-temp');
+const lowTempEl = document.getElementById('low-temp');
+const humidityEl = document.getElementById('humidity');
+const windSpeedEl = document.getElementById('wind-speed');
+const forecastContainerEl = document.getElementById('forecast-container');
+const apiStatusEl = document.getElementById('api-status');
+
+// Weather Icons Mapping
 const weatherIcons = {
-    '01d': 'fa-sun',           // clear sky (day)
-    '01n': 'fa-moon',          // clear sky (night)
+    '01d': 'fa-sun',
+    '01n': 'fa-moon',
     '02d': 'fa-cloud-sun',
     '02n': 'fa-cloud-moon',
     '03d': 'fa-cloud',
@@ -37,154 +37,112 @@ const weatherIcons = {
     '50n': 'fa-smog'
 };
 
-// Updated function to set icons
+// Set weather icon
 function setWeatherIcon(element, iconCode) {
     const iconClass = weatherIcons[iconCode] || 'fa-question';
     element.innerHTML = `<i class="fas ${iconClass}"></i>`;
 }
 
-// In your updateCurrentWeather function:
-function updateCurrentWeather(data) {
-    // ... other code ...
-    setWeatherIcon(currentIconEl, data.weather[0].icon);
-}
-
-// In your updateForecast function:
-function updateForecast(data) {
-    // ... other code ...
-    forecastItem.innerHTML = `
-        <div class="forecast-day">
-            <div class="forecast-icon">
-                <i class="fas ${weatherIcons[iconCode] || 'fa-question'}"></i>
-            </div>
-            <span class="day-name">${dayName}</span>
-        </div>
-        <span class="day-temp">${Math.round(day.main.temp)}°F</span>
-    `;
-}
-  // Fetch Weather Data with error handling
-  async function fetchWeatherData() {
+// Fetch Weather Data
+async function fetchWeatherData() {
     apiStatusEl.textContent = 'Fetching weather data...';
     
     try {
-      // Current Weather
-      const currentUrl = `https://api.openweathermap.org/data/2.5/weather?q=${CITY},${COUNTRY}&units=${UNITS}&appid=${API_KEY}`;
-      apiStatusEl.textContent = `Fetching: ${currentUrl}`;
-      
-      const currentResponse = await fetch(currentUrl);
-      
-      if (!currentResponse.ok) {
-        throw new Error(`HTTP error! status: ${currentResponse.status}`);
-      }
-      
-      const currentData = await currentResponse.json();
-      apiStatusEl.textContent = 'Current data loaded successfully';
-      
-      // Forecast
-      const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY},${COUNTRY}&units=${UNITS}&appid=${API_KEY}`;
-      const forecastResponse = await fetch(forecastUrl);
-      
-      if (!forecastResponse.ok) {
-        throw new Error(`HTTP error! status: ${forecastResponse.status}`);
-      }
-      
-      const forecastData = await forecastResponse.json();
-      apiStatusEl.textContent = 'Forecast data loaded successfully';
-      
-      updateCurrentWeather(currentData);
-      updateForecast(forecastData);
-      
+        // Current Weather
+        const currentUrl = `https://api.openweathermap.org/data/2.5/weather?q=${CITY},${COUNTRY}&units=${UNITS}&appid=${API_KEY}`;
+        const currentResponse = await fetch(currentUrl);
+        
+        if (!currentResponse.ok) throw new Error(`HTTP error! status: ${currentResponse.status}`);
+        const currentData = await currentResponse.json();
+        
+        // Forecast
+        const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY},${COUNTRY}&units=${UNITS}&appid=${API_KEY}`;
+        const forecastResponse = await fetch(forecastUrl);
+        
+        if (!forecastResponse.ok) throw new Error(`HTTP error! status: ${forecastResponse.status}`);
+        const forecastData = await forecastResponse.json();
+        
+        updateCurrentWeather(currentData);
+        updateForecast(forecastData);
+        apiStatusEl.textContent = 'Weather data loaded';
+        
     } catch (error) {
-      console.error('Error fetching weather data:', error);
-      apiStatusEl.textContent = `Error: ${error.message}`;
-      currentDescEl.textContent = 'Weather data unavailable';
-      forecastContainerEl.innerHTML = '<div class="error">Failed to load forecast. Please try again later.</div>';
+        console.error('Error:', error);
+        apiStatusEl.textContent = `Error: ${error.message}`;
+        currentDescEl.textContent = 'Weather data unavailable';
+        forecastContainerEl.innerHTML = '<div class="error">Failed to load forecast</div>';
     }
-  }
+}
 
-  // Update Current Weather
-  function updateCurrentWeather(data) {
-    console.log('Current weather data:', data);
+// Update Current Weather
+function updateCurrentWeather(data) {
     currentTempEl.textContent = `${Math.round(data.main.temp)}°F`;
     currentDescEl.textContent = data.weather[0].description;
     highTempEl.textContent = `${Math.round(data.main.temp_max)}°`;
     lowTempEl.textContent = `${Math.round(data.main.temp_min)}°`;
     humidityEl.textContent = `${data.main.humidity}%`;
     windSpeedEl.textContent = `${Math.round(data.wind.speed)} mph`;
-    
-    const iconCode = data.weather[0].icon;
-    currentIconEl.innerHTML = `<i class="${weatherIcons[iconCode] || 'fas fa-question'}"></i>`;
-  }
+    setWeatherIcon(currentIconEl, data.weather[0].icon);
+}
 
-  // Update Forecast
-  function updateForecast(data) {
-    console.log('Forecast data:', data);
+// Update Forecast
+function updateForecast(data) {
     forecastContainerEl.innerHTML = '';
     
-    if (!data.list || data.list.length === 0) {
-      forecastContainerEl.innerHTML = '<div class="error">No forecast data available</div>';
-      return;
+    if (!data.list?.length) {
+        forecastContainerEl.innerHTML = '<div class="error">No forecast data</div>';
+        return;
     }
     
     // Get noon forecasts for next 3 days
     const dailyForecasts = data.list.filter(item => {
-      const date = new Date(item.dt * 1000);
-      return date.getHours() >= 11 && date.getHours() <= 13;
+        const date = new Date(item.dt * 1000);
+        return date.getHours() >= 11 && date.getHours() <= 13;
     }).slice(0, 3);
     
-    if (dailyForecasts.length === 0) {
-      forecastContainerEl.innerHTML = '<div class="error">Could not process forecast data</div>';
-      return;
-    }
-    
     dailyForecasts.forEach(day => {
-      const date = new Date(day.dt * 1000);
-      const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
-      const iconCode = day.weather[0].icon;
-      
-      const forecastItem = document.createElement('div');
-      forecastItem.className = 'forecast-item';
-      forecastItem.innerHTML = `
-        <div class="forecast-day">
-          <div class="forecast-icon">
-            <i class="${weatherIcons[iconCode] || 'fas fa-question'}"></i>
-          </div>
-          <span class="day-name">${dayName}</span>
-        </div>
-        <span class="day-temp">${Math.round(day.main.temp)}°F</span>
-      `;
-      
-      forecastContainerEl.appendChild(forecastItem);
+        const date = new Date(day.dt * 1000);
+        const dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
+        const iconCode = day.weather[0].icon;
+        
+        const forecastItem = document.createElement('div');
+        forecastItem.className = 'forecast-item';
+        forecastItem.innerHTML = `
+            <div class="forecast-day">
+                <div class="forecast-icon">
+                    <i class="fas ${weatherIcons[iconCode] || 'fa-question'}"></i>
+                </div>
+                <span class="day-name">${dayName}</span>
+            </div>
+            <span class="day-temp">${Math.round(day.main.temp)}°F</span>
+        `;
+        forecastContainerEl.appendChild(forecastItem);
     });
-  }
+}
 
-  // Example: Show a status message
-  document.getElementById("api-status").innerText = "Failed to fetch data from API";
-
-  // Automatically hide after 5 seconds
-  setTimeout(() => {
-    document.getElementById("api-status").style.display = "none";
-  }, 5000); // 5000 ms = 5 seconds
-
-
-  // Initialize
-  document.addEventListener('DOMContentLoaded', fetchWeatherData);
-
-  // Toggle mobile nav
-document.getElementById('menu-toggle').addEventListener('click', () => {
-    document.getElementById('mobile-nav').classList.toggle('show');
-  });
-  
-  // Toggle dark mode
-  document.getElementById('theme-toggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-  });
- // Set copyright year
- document.getElementById('copyright-year').textContent = new Date().getFullYear();
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    fetchWeatherData();
     
- // Set last modified date (optional)
- document.getElementById('last-modified').textContent = document.lastModified;  
-
+    // Set copyright year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
+    
+    // Mobile nav toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+        document.getElementById('mobile-nav').classList.toggle('show');
+    });
+    
+    // Dark mode toggle
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+    
+    // Hide status message after 5 seconds
+    setTimeout(() => {
+        if (apiStatusEl) apiStatusEl.style.display = "none";
+    }, 5000);
+});
  // JSON data source
         const businessData = [
             {
@@ -217,21 +175,7 @@ document.getElementById('menu-toggle').addEventListener('click', () => {
                 "services": ["Organic Produce", "Farm Tours", "CSA Subscriptions"],
                 "rating": 4.6
             },
-            {
-                "id": 3,
-                "name": "Urban Design Studio",
-                "tagline": "Creating spaces that inspire",
-                "address": "789 Design Ave, New York, NY 10001",
-                "email": "hello@urbandesign.com",
-                "phone": "800-555-1003",
-                "website": "https://urbandesignstudio.com",
-                "logo": "images/logo3.png",
-                "membership": 1,
-                "founded": 2008,
-                "employees": 15,
-                "services": ["Interior Design", "Architecture", "Space Planning"],
-                "rating": 4.7
-            },
+         
             {
                 "id": 4,
                 "name": "Summit Financial",
@@ -247,66 +191,7 @@ document.getElementById('menu-toggle').addEventListener('click', () => {
                 "services": ["Wealth Management", "Retirement Planning", "Tax Services"],
                 "rating": 4.9
             },
-            {
-                "id": 5,
-                "name": "Oceanview Restaurants",
-                "tagline": "Fine dining with a view",
-                "address": "101 Coastal Highway, Miami, FL 33139",
-                "email": "reservations@oceanview.com",
-                "phone": "800-555-1005",
-                "website": "https://oceanviewrestaurants.com",
-                "logo": "images/logo5.jpg",
-                "membership": 2,
-                "founded": 2012,
-                "employees": 75,
-                "services": ["Fine Dining", "Catering", "Cooking Classes"],
-                "rating": 4.5
-            },
-            {
-                "id": 6,
-                "name": "Peak Performance Sports",
-                "tagline": "Equipment for champions",
-                "address": "234 Athletic Way, Denver, CO 80202",
-                "email": "sales@peakperformance.com",
-                "phone": "800-555-1006",
-                "website": "https://peakperformance.com",
-                "logo": "images/logo6.jpg",
-                "membership": 1,
-                "founded": 2005,
-                "employees": 32,
-                "services": ["Sports Equipment", "Team Uniforms", "Training Gear"],
-                "rating": 4.4
-            },
-            {
-                "id": 7,
-                "name": "Global Logistics Solutions",
-                "tagline": "Connecting your business to the world",
-                "address": "567 Shipping Lane, Chicago, IL 60601",
-                "email": "info@globallogistics.com",
-                "phone": "800-555-1007",
-                "website": "https://globallogistics.com",
-                "logo": "images/logo7.jpg",
-                "membership": 3,
-                "founded": 2000,
-                "employees": 420,
-                "services": ["Freight Shipping", "Warehousing", "Supply Chain Mgmt"],
-                "rating": 4.7
-            },
-            {
-                "id": 8,
-                "name": "Creative Minds Education",
-                "tagline": "Inspiring the next generation",
-                "address": "890 Learning Blvd, Boston, MA 02108",
-                "email": "learn@creativeminds.com",
-                "phone": "800-555-1008",
-                "website": "https://creativeminds.edu",
-                "logo": "images/logo8.png",
-                "membership": 2,
-                "founded": 2018,
-                "employees": 28,
-                "services": ["STEM Programs", "Arts Education", "Tutoring"],
-                "rating": 4.8
-            }
+           
         ];
 
         // DOM elements
@@ -436,18 +321,3 @@ document.getElementById('menu-toggle').addEventListener('click', () => {
 
         // Initial display
         displayBusinesses(businessData);
-
-        // In a real app, you would fetch from an API:
-        /*
-        async function fetchBusinesses() {
-            try {
-                const response = await fetch('businesses.json');
-                const data = await response.json();
-                displayBusinesses(data);
-            } catch (error) {
-                console.error('Error fetching businesses:', error);
-                businessDirectory.innerHTML = '<p>Error loading business directory. Please try again later.</p>';
-            }
-        }
-        fetchBusinesses();
-        */

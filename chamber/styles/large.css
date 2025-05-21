@@ -144,24 +144,7 @@
   margin: 0;
   padding: 0;
 }
-.theme-icon {
-  margin-right: 2em;
-  fill: none;
-  stroke: currentColor;
-}
 
-.moon-icon {
-  display: none;
-}
-
-/* Optional: If using a dark/light mode system */
-.dark-mode .sun-icon {
-  display: none;
-}
-
-.dark-mode .moon-icon {
-  display: block;
-}
 body {
   font-family: Arial, sans-serif;
   transition: background 0.3s, color 0.3s;
@@ -214,7 +197,7 @@ header {
   text-decoration: none;
   color: var(--success);
   font-weight: bold;
-  transition: color 0.3s
+  transition: color 0.3s;
 }
 
 .desktop-nav a:hover {
@@ -235,6 +218,25 @@ header {
   color: var(--accent-light);
 }
 
+/* Theme Icons */
+.theme-icon {
+  margin-right: 2em;
+  fill: none;
+  stroke: currentColor;
+}
+
+.moon-icon {
+  display: none;
+}
+
+.dark-mode .sun-icon {
+  display: none;
+}
+
+.dark-mode .moon-icon {
+  display: block;
+}
+
 /* Mobile Navigation */
 .hamburger {
   display: none;
@@ -251,7 +253,8 @@ header {
   color: var(--text-primary);
   padding: 8px 0;
 }
-/* Modern Hero with Glassmorphic Triangle */
+
+/* Hero Section */
 .hero {
   position: relative;
   min-height: 70vh;
@@ -259,6 +262,7 @@ header {
   background-position: center;
   overflow: hidden;
 }
+
 .sponsors {
   display: flex;
   align-items: center;
@@ -285,7 +289,6 @@ header {
   z-index: 1;
   animation: subtleZoom 25s infinite alternate;
 }
-
 
 .hero-glass-container {
   position: relative;
@@ -362,107 +365,21 @@ header {
   gap: 1.5rem;
 }
 
-/* Enhanced Glass Button */
 .glass-btn {
-  /* Your existing glass styles */
   min-width: 220px;
   text-align: center;
 }
-.btn-text{
-    font-weight: bold;
-    color: var(--gold);
+
+.btn-text {
+  font-weight: bold;
+  color: var(--gold);
 }
+
 .cta-note {
   font-size: 0.9rem;
   color: var(--danger);
   max-width: 120px;
   line-height: 1.4;
-}
-
-/* Animations */
-@keyframes subtleZoom {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.03); }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .hero-glass-container {
-    clip-path: polygon(0 0, 80% 0, 55% 100%, 0% 100%);
-  }
-  
-  .hero-content {
-    max-width: 50%;
-    padding: 3rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .hero-glass-container {
-    clip-path: none;
-    background: linear-gradient(
-      to right,
-      rgba(26, 26, 46, 0.9) 0%,
-      rgba(26, 26, 46, 0.7) 100%
-    );
-    justify-content: center;
-  }
-  
-  .hero-content {
-    max-width: 80%;
-    text-align: center;
-    padding: 4rem 2rem;
-  }
-  
-  .hero-description {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .hero-cta {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .cta-note {
-    max-width: 100%;
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    min-height: 80vh;
-  }
-  
-  .hero h1 {
-    font-size: 2.8rem;
-  }
-  
-  .hero-description {
-    font-size: 1.1rem;
-  }
-  
-  .hero-content {
-    max-width: 90%;
-    padding: 3rem 1rem;
-  }
-}
-#api-status{
-  color: red; margin-top: 10px;
 }
 
 /* Dashboard Styles */
@@ -954,10 +871,8 @@ footer {
   background-color: var(--bg-footer);
   padding: 30px 0;
   border-top: 1px solid var(--border-color);
-  font-family: Arial, sans-serif;
-  color: var(--text-primary);
-
 }
+
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -982,8 +897,6 @@ footer {
 .footer-social {
   display: flex;
   gap: 20px;
-  width: 60px;
-  height: 60px;
 }
 
 .footer-social a {
@@ -994,13 +907,34 @@ footer {
   transition: color 0.3s;
 }
 
-
-
 .footer-meta {
   text-align: right;
 }
 
-/* Responsive Styles */
+/* Animations */
+@keyframes subtleZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.03); }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* API Status */
+#api-status {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   /* Navigation */
   .desktop-nav {
@@ -1008,7 +942,7 @@ footer {
   }
 
   .hamburger {
-    display: inline;
+    display: block;
   }
 
   .mobile-nav.show {
@@ -1016,20 +950,41 @@ footer {
   }
 
   /* Hero Section */
-  .hero-content, .ticket-badge {
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    width: auto;
+  .hero-glass-container {
+    clip-path: none;
+    background: linear-gradient(
+      to right,
+      rgba(26, 26, 46, 0.9) 0%,
+      rgba(26, 26, 46, 0.7) 100%
+    );
+    justify-content: center;
   }
   
-  .ticket-badge {
-    top: auto;
-    bottom: 80px;
+  .hero-content {
+    max-width: 80%;
+    text-align: center;
+    padding: 4rem 2rem;
   }
-.theme-icon{
-  margin: 0%;
-}
+  
+  .hero-description {
+    max-width: 100%;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .cta-note {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .theme-icon {
+    margin-right: 0;
+  }
+
   /* Dashboard */
   .dashboard {
     grid-template-columns: 1fr;
@@ -1045,8 +1000,7 @@ footer {
   }
   
   .controls {
-    flex-direction: column;
-    align-items: stretch;
+    grid-template-columns: 1fr;
   }
   
   .search-box, .filter-select {
@@ -1072,11 +1026,12 @@ footer {
 @media (max-width: 480px) {
   /* Hero Section */
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
   
   .hero-content {
-    padding: 0;
+    max-width: 90%;
+    padding: 3rem 1rem;
   }
 
   /* Weather Grid */
@@ -1089,14 +1044,4 @@ footer {
     flex-direction: column;
     gap: 8px;
   }
-}
-
-/* Dark Mode Styles */
-.dark-mode {
-  background-color: var(--dark);
-  color: var(--text-light);
-}
-
-.dark-mode header {
-  background-color: var(--gray-800);
 }
