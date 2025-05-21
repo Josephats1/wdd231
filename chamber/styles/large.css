@@ -377,7 +377,7 @@ header {
 
 .cta-note {
   font-size: 0.9rem;
-  color: var(--danger);
+  color: var(--bg-color);
   max-width: 120px;
   line-height: 1.4;
 }
