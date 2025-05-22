@@ -611,8 +611,9 @@ header {
 }
 
 .weather-label {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: bolder;
+  color: var(--accent-dark);
 }
 
 /* Forecast Card */
