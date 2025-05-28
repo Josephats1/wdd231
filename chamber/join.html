@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Masaka Chamber of Commerce to connect with local businesses, access resources, and grow your organization.">
+  <meta name="author" content="Baluku Josephats">
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="images/favicon.svg" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicon.svg" sizes="16x16">
+  <link rel="apple-touch-icon" href="images/favicon.svg">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:url" content="https://josephats1.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Join Masaka Chamber of Commerce">
+  <meta property="og:description" content="Become a member of the Masaka Chamber of Commerce and access business resources, networking, and growth opportunities.">
+  <meta property="og:image" content="https://josephats1.github.io/wdd231/chamber/images/social-preview.jpg">
+  <meta property="og:site_name" content="Masaka Chamber of Commerce">
+  <title>Join Masaka Chamber of Commerce | Membership Application</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles/join.css">
+  <!-- JavaScript -->
+  <script defer src="scripts/join.js"></script>
+  
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <div class="logo-group">
+        <img src="images/logo.webp" alt="Logo">
+        <h1 class="brand-name">Masaka <br>
+          <span id="name">Chamber of Commerce</span></h1>
+      </div>
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+        <a href="discover.html">Discover</a>
+      </nav>
+      <div class="right-group">
+        <button id="theme-toggle" aria-label="Toggle light and dark theme">
+          <!-- Sun icon (visible by default) -->
+          <svg class="theme-icon sun-icon" width="24" height="24" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" stroke-width="2" />
+            <line x1="12" y1="21" x2="12" y2="23" stroke-width="2" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke-width="2" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke-width="2" />
+          </svg>
+          
+          <!-- Moon icon (hidden by CSS) -->
+          <svg class="theme-icon moon-icon" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button id="menu-toggle" class="hamburger">&#9776;</button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Join Masaka Chamber of Commerce</h1>
+    
+    <div class="form-container">
+      <form id="joinForm" method="get" action="thankyou.html">
+        <input type="hidden" id="timestamp" name="timestamp">
+        
+        <div class="form-group">
+          <label for="firstName">First Name*</label>
+          <input type="text" id="firstName" name="firstName" title="Please enter your first name" 
+                 autocomplete="given-name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="lastName">Last Name*</label>
+          <input type="text" id="lastName" name="lastName" title="Please enter your last name" 
+                 autocomplete="family-name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="title">Business Title</label>
+          <input type="text" id="title" name="title" title="Please enter your business title" 
+                 autocomplete="organization-title" pattern="[a-zA-Z\- ]{7,}">
+          <small>Alpha characters, hyphens, and spaces only (minimum 7 characters)</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" title="Please enter a valid email address" 
+                 autocomplete="email" placeholder="example@domain.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Mobile Phone*</label>
+          <input type="tel" id="phone" name="phone" title="Please enter your mobile phone number" 
+                 autocomplete="tel" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="business">Business/Organization Name*</label>
+          <input type="text" id="business" name="business" title="Please enter your business or organization name" 
+                 autocomplete="organization" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="membership">Membership Level*</label>
+          <select id="membership" name="membership" title="Please select a membership level" required>
+            <option value="">Select a membership level</option>
+            <option value="np">NP Membership (<strong>Free</strong>)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="description">Business Description</label>
+          <textarea id="description" name="description" title="Please describe your business or organization"></textarea>
+        </div>
+        
+        <button type="submit">Submit Application</button>
+      </form>
+      
+      <div class="membership-cards">
+        <div class="membership-card np">
+          <h3>NP Membership</h3>
+          <p>For non-profit organizations with no membership fee.</p>
+          <a href="#npModal" class="learn-more" id="npLearnMore">Learn More</a>
+        </div>
+        
+        <div class="membership-card bronze">
+          <h3>Bronze Membership</h3>
+          <p>Basic membership with essential benefits.</p>
+          <a href="#bronzeModal" class="learn-more" id="bronzeLearnMore">Learn More</a>
+        </div>
+        
+        <div class="membership-card silver">
+          <h3>Silver Membership</h3>
+          <p>Enhanced membership with additional benefits.</p>
+          <a href="#silverModal" class="learn-more" id="silverLearnMore">Learn More</a>
+        </div>
+        
+        <div class="membership-card gold">
+          <h3>Gold Membership</h3>
+          <p>Premium membership with all benefits.</p>
+          <a href="#goldModal" class="learn-more" id="goldLearnMore">Learn More</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- NP Membership Modal -->
+    <div id="npModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>NP Membership Benefits</h2>
+        <p>Our Non-Profit Membership is designed specifically for non-profit organizations in the Masaka region.</p>
+        <ul class="benefits-list">
+          <li>Free membership with no annual fees</li>
+          <li>Listing in our non-profit business directory</li>
+          <li>Access to networking events</li>
+          <li>Monthly newsletter with funding opportunities</li>
+          <li>Participation in community outreach programs</li>
+          <li>Quarterly non-profit roundtable discussions</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Bronze Membership Modal -->
+    <div id="bronzeModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Bronze Membership Benefits</h2>
+        <p>Our Bronze Membership provides essential benefits for small businesses and startups.</p>
+        <ul class="benefits-list">
+          <li>Annual fee: $150</li>
+          <li>Business listing in our online directory</li>
+          <li>Access to monthly networking events</li>
+          <li>Subscription to our business newsletter</li>
+          <li>10% discount on chamber-sponsored workshops</li>
+          <li>Basic social media promotion (1 post per quarter)</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Silver Membership Modal -->
+    <div id="silverModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Silver Membership Benefits</h2>
+        <p>Our Silver Membership offers enhanced benefits for growing businesses.</p>
+        <ul class="benefits-list">
+          <li>Annual fee: $300</li>
+          <li>All Bronze benefits plus:</li>
+          <li>Featured listing in our online directory</li>
+          <li>Access to exclusive business seminars</li>
+          <li>20% discount on chamber-sponsored workshops</li>
+          <li>Priority registration for events</li>
+          <li>Monthly social media promotion (1 post per month)</li>
+          <li>Quarterly business spotlight opportunity</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Gold Membership Modal -->
+    <div id="goldModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Gold Membership Benefits</h2>
+        <p>Our Gold Membership provides premium benefits for established businesses.</p>
+        <ul class="benefits-list">
+          <li>Annual fee: $500</li>
+          <li>All Silver benefits plus:</li>
+          <li>Premium featured listing in our directory</li>
+          <li>VIP access to all chamber events</li>
+          <li>Free admission to chamber workshops</li>
+          <li>Weekly social media promotion</li>
+          <li>Monthly business spotlight feature</li>
+          <li>Annual recognition at chamber gala</li>
+          <li>Dedicated business consultant sessions</li>
+          <li>Opportunity to sponsor chamber events</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-contact">
+        <h3>Masaka Chamber of Commerce</h3>
+        <p>10 Rue De La Paix<br>
+        Masaka, Mali 999</p>
+        <p>info@Masakacc.org</p>
+        <p>(223) 555-2300</p>
+      </div>
+      <div class="footer-social">
+        
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+      
+      <div class="footer-meta">
+        <p>WDD231 Class Project<br>
+        Baluku Josephats</p> 
+        <p>© <span id="copyright-year">2025</span> Masaka Chamber of Commerce</p>
+        <p>Last Modification: <span id="last-modified">10/21/202X 22:12:35</span></p>
+      </div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>

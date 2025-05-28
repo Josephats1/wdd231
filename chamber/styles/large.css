@@ -372,6 +372,7 @@ header {
 
 .btn-text {
   font-weight: bold;
+  text-decoration: underline;
   color: var(--gold);
 }
 
@@ -380,6 +381,7 @@ header {
   color: var(--bg-color);
   max-width: 120px;
   line-height: 1.4;
+  
 }
 
 /* Dashboard Styles */

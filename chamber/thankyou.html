@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for joining the Masaka Chamber of Commerce">
+  <meta name="author" content="Baluku Josephats">
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="images/favicon.svg" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicon.svg" sizes="16x16">
+  <link rel="apple-touch-icon" href="images/favicon.svg">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:url" content="https://josephats1.github.io/wdd231/chamber/thankyou.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Thank You | Masaka Chamber of Commerce">
+  <meta property="og:description" content="Thank you for joining the Masaka Chamber of Commerce">
+  <meta property="og:image" content="https://josephats1.github.io/wdd231/chamber/images/social-preview.jpg">
+  <meta property="og:site_name" content="Masaka Chamber of Commerce">
+  <title>Thank You | Masaka Chamber of Commerce</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles/thankyou.css">
+  <link rel="stylesheet" href="scripts/thankyou.js">
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <div class="logo-group">
+        <img src="images/logo.webp" alt="Logo">
+        <h1 class="brand-name">Masaka <br>
+          <span id="name">Chamber of Commerce</span></h1>
+      </div>
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+        <a href="discover.html">Discover</a>
+      </nav>
+      <div class="right-group">
+        <button id="theme-toggle" aria-label="Toggle light and dark theme">
+          <!-- Sun icon (visible by default) -->
+          <svg class="theme-icon sun-icon" width="24" height="24" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" stroke-width="2" />
+            <line x1="12" y1="21" x2="12" y2="23" stroke-width="2" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke-width="2" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke-width="2" />
+          </svg>
+          
+          <!-- Moon icon (hidden by CSS) -->
+          <svg class="theme-icon moon-icon" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button id="menu-toggle" class="hamburger">&#9776;</button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
+    </div>
+  </header>
+
+  <main>
+    <h1>Welcome to the Chamber!</h1>
+    
+    <div class="thank-you-card">
+      <h2>Thank You for Joining!</h2>
+      <p>We appreciate your application to the Masaka Chamber of Commerce. Your membership helps strengthen our business community and contributes to the economic growth of our region.</p>
+      
+      <div class="submission-details">
+        <h3>Your Submission Details</h3>
+        
+        <div class="detail-row">
+          <div class="detail-label">Full Name:</div>
+          <div class="detail-value" id="full-name"></div>
+        </div>
+        
+        <div class="detail-row">
+          <div class="detail-label">Email:</div>
+          <div class="detail-value" id="email"></div>
+        </div>
+        
+        <div class="detail-row">
+          <div class="detail-label">Phone:</div>
+          <div class="detail-value" id="phone"></div>
+        </div>
+        
+        <div class="detail-row">
+          <div class="detail-label">Business Name:</div>
+          <div class="detail-value" id="business"></div>
+        </div>
+        
+        <div class="detail-row">
+          <div class="detail-label">Membership Level:</div>
+          <div class="detail-value" id="membership"></div>
+        </div>
+        
+        <div class="detail-row">
+          <div class="detail-label">Submission Date:</div>
+          <div class="detail-value" id="timestamp"></div>
+        </div>
+      </div>
+      
+      <div class="action-buttons">
+        <a href="index.html" class="btn btn-primary">Return to Home</a>
+        <a href="directory.html" class="btn btn-secondary">View Business Directory</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-contact">
+        <h3>Masaka Chamber of Commerce</h3>
+        <p>10 Rue De La Paix<br>
+        Masaka, Mali 999</p>
+        <p>info@Masakacc.org</p>
+        <p>(223) 555-2300</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+      
+      <div class="footer-meta">
+        <p>WDD231 Class Project<br>
+        Baluku Josephats</p>
+        <p>© <span id="copyright-year">20xx</span> Masaka Chamber of Commerce</p>
+        <p>Last Modification: <span id="last-modified">10/21/202X 22:12:35</span></p>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
