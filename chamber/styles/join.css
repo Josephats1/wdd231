@@ -393,7 +393,7 @@ button[type="submit"]:hover {
 .modal {
   display: none;
   position: fixed;
-  z-index: var(--z-index-modal);
+ 
   left: 0;
   top: 0;
   width: 100%;
@@ -484,7 +484,7 @@ footer {
 
 .footer-social {
   display: flex;
-  gap: 30px;
+  gap: 10px;
 }
 
 .footer-social a {
