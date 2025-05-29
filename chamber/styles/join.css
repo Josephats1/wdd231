@@ -54,6 +54,11 @@
   --border-dark: var(--gray-300);
   --border-light: var(--gray-100);
   
+  /* Shadow Colors */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-light: rgba(255, 255, 255, 0.5);
+  --shadow-dark: rgba(163, 177, 198, 0.6);
+  
   /* Special Colors */
   --silver: #c0c0c0;
   --gold: #ffd700;
@@ -69,6 +74,21 @@
   --transition-fast: all 0.15s ease;
   --transition-slow: all 0.5s ease;
   
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  
+  /* Z-index */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal: 1040;
+  --z-index-popover: 1050;
+  --z-index-tooltip: 1060;
+
   /* Card Styles */
   --card-radius: 16px;
   --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -83,6 +103,10 @@
   --primary: #5a72ee;
   --secondary: #ff6b6b;
   --accent: #64dfdf;
+  
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-light: rgba(255, 255, 255, 0.05);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
   
   /* Adjust glass effect for dark mode */
   --glass-opacity: 0.15;
@@ -211,7 +235,14 @@ main {
   margin: 0 auto;
   padding: 20px;
 }
+.modal-content {
+  animation: modalFadeIn 0.3s;
+}
 
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 h1 {
   text-align: center;
   margin-bottom: 30px;
@@ -393,7 +424,7 @@ button[type="submit"]:hover {
 .modal {
   display: none;
   position: fixed;
- 
+  z-index: var(--z-index-modal);
   left: 0;
   top: 0;
   width: 100%;
@@ -484,7 +515,7 @@ footer {
 
 .footer-social {
   display: flex;
-  gap: 10px;
+  gap: 30px;
 }
 
 .footer-social a {
