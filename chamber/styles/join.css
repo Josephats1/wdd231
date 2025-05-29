@@ -1,3 +1,4 @@
+
 :root {
   /* Primary Colors */
   --primary: #4361ee;
@@ -574,7 +575,10 @@ footer {
   .theme-icon {
     margin: 0%;
   }
- 
+ h1{
+  font-size: small;
+  width: 90%;
+ }
   /* Footer */
   .footer-content {
     flex-direction: column;

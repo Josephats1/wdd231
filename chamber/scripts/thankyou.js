@@ -1,30 +1,53 @@
-    // Parse URL parameters
-    function getQueryParam(param) {
+   document.addEventListener('DOMContentLoaded', function() {
+      // Get URL parameters
       const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get(param);
-    }
+      console.log('URL Parameters:', Array.from(urlParams.entries()));
+      
+      // Display submitted data
+      function displayFormData() {
+        // Full Name
+        document.getElementById('full-name').textContent = 
+          urlParams.has('firstName') && urlParams.has('lastName')
+            ? `${urlParams.get('firstName')} ${urlParams.get('lastName')}`
+            : 'Not provided';
+        
+        // Email
+        document.getElementById('email').textContent = 
+          urlParams.get('email') || 'Not provided';
+          
+        // Phone
+        document.getElementById('phone').textContent = 
+          urlParams.get('phone') || 'Not provided';
+          
+        // Business
+        document.getElementById('business').textContent = 
+          urlParams.get('business') || 'Not provided';
+          
+        // Membership Level
+        const membership = urlParams.get('membership');
+        let membershipText = 'Not provided';
+        
+        if (membership) {
+          switch(membership) {
+            case 'np': membershipText = 'NP Membership'; break;
+            case 'bronze': membershipText = 'Bronze Membership'; break;
+            case 'silver': membershipText = 'Silver Membership'; break;
+            case 'gold': membershipText = 'Gold Membership'; break;
+            default: membershipText = membership;
+          }
+        }
+        document.getElementById('membership').textContent = membershipText;
+        
+        // Timestamp
+        const timestamp = urlParams.get('timestamp');
+        document.getElementById('timestamp').textContent = 
+          timestamp ? new Date(timestamp).toLocaleString() : 'Not available';
+      }
 
-    // Format timestamp
-    function formatTimestamp(timestamp) {
-      if (!timestamp) return 'N/A';
-      const date = new Date(timestamp);
-      return date.toLocaleString();
-    }
-
-    // Format membership level
-    function formatMembership(level) {
-      const levels = {
-        'np': 'NP Membership (Non-Profit)',
-        'bronze': 'Bronze Membership',
-        'silver': 'Silver Membership',
-        'gold': 'Gold Membership'
-      };
-      return levels[level] || level;
-    }
-
-    // Display form data
-    document.addEventListener('DOMContentLoaded', function() {
-      // Set copyright year
+      // Initialize page
+      displayFormData();
+      
+      // Set current year and last modified date
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
       document.getElementById('last-modified').textContent = document.lastModified;
       
@@ -37,21 +60,4 @@
       document.getElementById('theme-toggle').addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
       });
-
-      // Get form data from URL
-      const firstName = getQueryParam('firstName') || '';
-      const lastName = getQueryParam('lastName') || '';
-      const email = getQueryParam('email') || '';
-      const phone = getQueryParam('phone') || '';
-      const business = getQueryParam('business') || '';
-      const membership = getQueryParam('membership') || '';
-      const timestamp = getQueryParam('timestamp') || '';
-
-      // Display the data
-      document.getElementById('full-name').textContent = `${firstName} ${lastName}`;
-      document.getElementById('email').textContent = email;
-      document.getElementById('phone').textContent = phone;
-      document.getElementById('business').textContent = business;
-      document.getElementById('membership').textContent = formatMembership(membership);
-      document.getElementById('timestamp').textContent = formatTimestamp(timestamp);
     });
