@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "name": "Masaka Farm Supplies",
         "address": "12 Kampala Road, Masaka",
         "description": "Your one-stop shop for quality farming equipment, seeds, and fertilizers. Serving Masaka's agricultural community since 2010.",
-        "image": "https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBIqxCSdnSVd5u2A0P9pMLcXTkk3lNr6iksg&s",
         "category": "agriculture",
         "buttonText": "Shop Now",
         "buttonIcon": "shopping-cart"
