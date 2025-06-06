@@ -43,9 +43,12 @@
 
             <div class="right-group">
                 <button id="theme-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
-                <button class="hamburger" onclick="toggleMobileNav()">
-                    <i class="fas fa-bars"></i>
-                </button>
+               <button class="hamburger" onclick="toggleMobileNav()" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false"
+        aria-controls="mobileNav">
+    <i class="fas fa-bars"></i>
+</button>
             </div>
         </div>
 
@@ -144,11 +147,10 @@
             </div>
           
           <div class="about-section">
-            <h3><i class="fas fa-handshake"></i> Membership Benefits</h3>
-            <p>Join the Masaka Chamber to access networking events, business resources, marketing opportunities, and exclusive member discounts.</p>
-            <button class="btn">Join Today</button>
-          </div>
-        </div>
+  <h3><i class="fas fa-handshake"></i> Membership Benefits</h3>
+  <p>Join the Masaka Chamber to access networking events, business resources, marketing opportunities, and exclusive member discounts.</p>
+  <button class="btn">Join Today</button>
+</div>
       </aside>
     </div>
   </div>
@@ -178,10 +180,24 @@
             <div class="footer-section">
                 <h3>Follow Us</h3>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <div class="social-links">
+    <a href="#">
+        <span class="visually-hidden">Facebook</span>
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#">
+        <span class="visually-hidden">Twitter</span>
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#">
+        <span class="visually-hidden">Instagram</span>
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#">
+        <span class="visually-hidden">YouTube</span>
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
                 </div>
             </div>
             
