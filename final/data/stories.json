@@ -1,0 +1,17 @@
+[
+    {
+        "id": "story1",
+        "title": "Maria's Journey",
+        "summary": "How Maria gained mobility through our prosthetics program"
+    },
+    {
+        "id": "story2",
+        "title": "Ahmed's Education",
+        "summary": "Ahmed's success in our special education program"
+    },
+    {
+        "id": "story3",
+        "title": "Community Transformation",
+        "summary": "How we helped build an accessible playground"
+    }
+]

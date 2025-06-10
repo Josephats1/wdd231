@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Education Fund",
+        "description": "Provides scholarships and school supplies for children with disabilities",
+        "beneficiaries": "200 children annually",
+        "location": "Global"
+    },
+    {
+        "name": "Healthcare Support",
+        "description": "Offers free medical checkups and mobility devices",
+        "beneficiaries": "500+ patients yearly",
+        "location": "East Africa"
+    },
+    {
+        "name": "Community Outreach",
+        "description": "Builds accessible infrastructure in underserved communities",
+        "beneficiaries": "15 communities",
+        "location": "South America"
+    }
+]

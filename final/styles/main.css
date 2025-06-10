@@ -1,0 +1,261 @@
+/* styles.css - DearLove Homepage Styles */
+
+:root {
+  --color1: #E63946; /* Compassion Red */
+  --color2: #F1FAEE; /* Peace White */
+  --color3: #A8DADC; /* Healing Teal */
+  --color4: #457B9D; /* Trust Blue */
+
+  --font-main: 'Segoe UI', sans-serif;
+  --transition: all 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color2);
+  color: #333;
+  line-height: 1.6;
+  transition: var(--transition);
+}
+
+header {
+  background-color: var(--color4);
+  color: white;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  text-decoration: underline;
+  color: var(--color3);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color4);
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  background: linear-gradient(to right, var(--color1), var(--color4));
+  padding: 4rem 2rem;
+}
+
+.hero video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  animation: fadeInDown 1s ease;
+}
+
+.hero .subheadline {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.btn {
+  background: var(--color3);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--color1);
+}
+
+.btn.large {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+
+.overview, .features, .intro-video, .user-stories, .trust, .cta {
+  padding: 2rem;
+  text-align: center;
+}
+
+.icons span {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color3);
+  color: var(--color4);
+  border-radius: 25px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: var(--color2);
+}
+
+.intro-video video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-top: 1rem;
+}
+
+.carousel figure {
+  background: var(--color3);
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  border-left: 5px solid var(--color1);
+  transition: var(--transition);
+  border-radius: 8px;
+}
+
+.cta {
+  background: var(--color1);
+  color: white;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.trust-icons li {
+  list-style: none;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: var(--color4);
+}
+
+.partners img {
+  height: 40px;
+  margin: 1rem;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.partners img:hover {
+  opacity: 1;
+}
+
+footer {
+  background: var(--color4);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-links a,
+.social-icons a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--color1);
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.25rem;
+  filter: brightness(0) invert(1);
+}
+
+.accessibility button {
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background: var(--color3);
+  color: #000;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.accessibility button:hover {
+  background: var(--color1);
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
