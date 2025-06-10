@@ -35,6 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
+//WAY FINDER
+const links = document.querySelectorAll('.desktop-nav a, .mobile-nav a');
+  const currentPath = window.location.pathname;
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPath.split('/').pop()) {
+      link.classList.add('active');
+    }
+  });
      // Visit tracking system
     document.addEventListener('DOMContentLoaded', function() {
       // Visit message functionality
