@@ -106,7 +106,7 @@
             color: white;
             padding: 0.75rem 1.5rem;
             border: none;
-            border-radius: 25px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -135,7 +135,7 @@
 
         /* Main Content */
         main {
-            margin-top: 80px;
+            margin-top: 40px;
         }
 
         /* Hero Section */
@@ -264,7 +264,7 @@
 
         /* Programs Preview */
         .programs-preview {
-            padding: 6rem 2rem;
+            padding: 2rem 2rem;
         }
 
         .section-title {
@@ -334,7 +334,7 @@
         /* Data Display Section */
         .data-section {
             background: var(--light-bg);
-            padding: 6rem 2rem;
+            padding: 2rem 2rem;
         }
 
         .data-grid {
@@ -556,11 +556,7 @@
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
 
-            .programs-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .data-grid {
+            .programs-grid .data-grid{
                 grid-template-columns: 1fr;
             }
         }
