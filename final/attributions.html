@@ -3,15 +3,497 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attributions | Jerry Fly Charity</title>
+    <meta name="description" content="Hope Foundation Attributions - Credits for resources used in our website and projects.">
+    <meta name="author" content="Hope Foundation Team">
+    <meta property="og:title" content="Hope Foundation - Attributions">
+    <meta property="og:description" content="Acknowledgements for resources used by Hope Foundation">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hopefoundation.org/attributions">
+    <title>Attributions | Hope Foundation</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ff6b35'/%3E%3Cpath d='M30 40 Q50 20 70 40 Q50 60 30 40' fill='white'/%3E%3C/svg%3E">
+    <style>
+        /* Reuse existing styles from other pages */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #ff6b35;
+            --secondary-color: #2c3e50;
+            --accent-color: #f39c12;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Header Styles - Consistent with other pages */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .register-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .register-btn:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-color);
+            transition: 0.3s;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            padding: 2rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Attribution Content */
+        .attribution-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .attribution-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 0.5rem;
+        }
+
+        .attribution-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--light-bg);
+        }
+
+        .attribution-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .attribution-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .attribution-item p {
+            color: #666;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .attribution-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .attribution-item a:hover {
+            text-decoration: underline;
+        }
+
+        .license-badge {
+            display: inline-block;
+            background: var(--light-bg);
+            color: var(--secondary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Footer - Consistent with other pages */
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bbb;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: #bbb;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 2rem;
+                transition: left 0.3s ease;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links a {
+                padding: 1rem;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #eee;
+            }
+
+            .header-container {
+                padding: 1rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .attribution-section {
+                padding: 1.5rem;
+            }
+            
+            .attribution-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .attribution-item h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Resource Attributions</h1>
-    <ul>
-        <li>Logo: Created using Canva</li>
-        <li>Hero Image: Unsplash (Free License)</li>
-        <li>Success Story Images: Pexels (Free License)</li>
-    </ul>
-    <a href="index.html">Return to Home</a>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">H</div>
+                Hope Foundation
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="about.html">About</a></li>
+                   
+                    <li><a href="attributions.html" class="active">Attributions</a></li>
+                      <li><a href="register.html">Register</a></li>
+                </ul>
+               
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Attributions</h1>
+                <p class="page-subtitle">We gratefully acknowledge the following resources and contributors that help make our work possible.</p>
+            </div>
+
+            <div class="attribution-section">
+                <h2>Media Resources</h2>
+                
+                <div class="attribution-item">
+                    <h3>Photography</h3>
+                    <p>All hero images courtesy of <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> photographers:</p>
+                    <ul style="margin-left: 1.5rem; color: #666; line-height: 1.6;">
+                        <li>Education photos by <a href="https://unsplash.com/@priscilladupreez" target="_blank" rel="noopener">Priscilla Du Preez</a></li>
+                        <li>Healthcare photos by <a href="https://unsplash.com/@cdc" target="_blank" rel="noopener">CDC</a></li>
+                        <li>Community photos by <a href="https://unsplash.com/@jtylernix" target="_blank" rel="noopener">Tyler Nix</a></li>
+                    </ul>
+                    <span class="license-badge">Unsplash License</span>
+                </div>
+                
+                <div class="attribution-item">
+                    <h3>Icons</h3>
+                    <p>Interface icons from <a href="https://fontawesome.com" target="_blank" rel="noopener">Font Awesome</a></p>
+                    <p>Program category icons from <a href="https://emojipedia.org" target="_blank" rel="noopener">Emojipedia</a></p>
+                    <span class="license-badge">CC BY 4.0</span>
+                </div>
+                
+                <div class="attribution-item">
+                    <h3>Illustrations</h3>
+                    <p>Custom illustrations by <a href="https://freepik.com" target="_blank" rel="noopener">Freepik</a> artists</p>
+                    <span class="license-badge">Freepik License</span>
+                </div>
+            </div>
+
+            <div class="attribution-section">
+                <h2>Technology</h2>
+                
+                <div class="attribution-item">
+                    <h3>Frontend Libraries</h3>
+                    <p><a href="https://jquery.com" target="_blank" rel="noopener">jQuery</a> - JavaScript library</p>
+                    <p><a href="https://animate.style" target="_blank" rel="noopener">Animate.css</a> - CSS animations</p>
+                    <span class="license-badge">MIT License</span>
+                </div>
+                
+                <div class="attribution-item">
+                    <h3>Maps</h3>
+                    <p><a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a> - Interactive maps</p>
+                    <span class="license-badge">BSD 2-Clause</span>
+                </div>
+                
+                <div class="attribution-item">
+                    <h3>Charts</h3>
+                    <p><a href="https://www.chartjs.org" target="_blank" rel="noopener">Chart.js</a> - Data visualization</p>
+                    <span class="license-badge">MIT License</span>
+                </div>
+            </div>
+
+            <div class="attribution-section">
+                <h2>Content</h2>
+                
+                <div class="attribution-item">
+                    <h3>Educational Resources</h3>
+                    <p>Curriculum materials adapted from <a href="https://creativecommons.org" target="_blank" rel="noopener">Creative Commons</a> licensed content</p>
+                    <span class="license-badge">CC BY-SA 4.0</span>
+                </div>
+                
+                <div class="attribution-item">
+                    <h3>Health Information</h3>
+                    <p>Medical content reviewed using <a href="https://www.who.int" target="_blank" rel="noopener">WHO</a> guidelines</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hope Charity Org.</h3>
+                <p>Dedicated to creating lasting positive change in communities worldwide through sustainable development programs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="programs.html">Programs</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="attributions.html">Attributions</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@hopefoundation.org</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Hope Street, Global City</p>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <p><a href="privacy.html">Privacy Policy</a></p>
+                <p><a href="terms.html">Terms of Service</a></p>
+                <p><a href="cookies.html">Cookie Policy</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hope Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+                document.querySelector('.hamburger').classList.remove('active');
+            });
+        });
+
+        // External link warning
+        document.querySelectorAll('a[target="_blank"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if(!confirm('You are about to leave the Hope Foundation website. Continue?')) {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

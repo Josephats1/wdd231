@@ -3,495 +3,403 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Begin Your Belonging - Full Commitment Registration</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 5px;
-        }
-        .tagline {
-            text-align: center;
-            font-style: italic;
-            margin-bottom: 30px;
-            color: #7f8c8d;
-        }
-        section {
-            background-color: white;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: #3498db;
-            margin-top: 0;
-        }
-        .section-intro {
-            font-style: italic;
-            color: #7f8c8d;
-            margin-bottom: 20px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-        input[type="text"],
-        input[type="number"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        textarea {
-            min-height: 100px;
-        }
-        .checkbox-group, .radio-group {
-            margin-top: 10px;
-        }
-        .checkbox-item, .radio-item {
-            margin-bottom: 8px;
-        }
-        .required {
-            color: #e74c3c;
-        }
-        .submit-section {
-            text-align: center;
-            padding: 30px;
-        }
-        #submit-btn {
-            background-color: #2ecc71;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        #submit-btn:disabled {
-            background-color: #95a5a6;
-            cursor: not-allowed;
-        }
-        .upload-box {
-            border: 2px dashed #ddd;
-            padding: 20px;
-            text-align: center;
-            border-radius: 4px;
-            margin-top: 10px;
-        }
-        .emoji {
-            font-size: 24px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-        .closing-reminder {
-            font-style: italic;
-            text-align: center;
-            padding: 20px;
-            border-top: 1px solid #eee;
-            color: #7f8c8d;
-        }
-    </style>
+    <meta name="description" content="Register with Hope Foundation - Join our community as a volunteer, donor, or partner to make a difference worldwide.">
+    <meta name="author" content="Hope Foundation Team">
+    <meta property="og:title" content="Register with Hope Foundation">
+    <meta property="og:description" content="Become part of our global movement by registering as a volunteer, donor, or partner with Hope Foundation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hopefoundation.org/register">
+    <title>Register | Hope Foundation</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ff6b35'/%3E%3Cpath d='M30 40 Q50 20 70 40 Q50 60 30 40' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles/register.css">
+    
 </head>
 <body>
-    <h1>Begin Your Belonging</h1>
-    <p class="tagline">You are not here by accident. Complete your truth, so we can complete your circle.</p>
-    
-    <form id="belonging-form">
-        <!-- Section 1: Identity & Self-Expression -->
-        <section>
-            <h2><span class="emoji">🧍</span> Identity & Self-Expression</h2>
-            <p class="section-intro">"Let us know how you choose to be seen."</p>
-            
-            <div class="form-group">
-                <label for="full-name">Full Name / Chosen Name <span class="required">*</span></label>
-                <input type="text" id="full-name" name="full-name" required>
+   <header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">H</div>
+            Hope Charity Org
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html" class="register-btn active" id="registerBtn">Register</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            
-            <div class="form-group">
-                <label for="pronouns">Pronouns <span class="required">*</span></label>
-                <select id="pronouns" name="pronouns" required>
-                    <option value="">Select your pronouns</option>
-                    <option value="he-him">He/Him</option>
-                    <option value="she-her">She/Her</option>
-                    <option value="they-them">They/Them</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="age">Age <span class="required">*</span></label>
-                <input type="number" id="age" name="age" min="18" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="gender-identity">Gender Identity <span class="required">*</span></label>
-                <select id="gender-identity" name="gender-identity" required>
-                    <option value="">Select your gender identity</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="non-binary">Non-Binary</option>
-                    <option value="trans">Trans</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="profile-photo">Upload a Profile Photo <span class="required">*</span></label>
-                <div class="upload-box">
-                    <input type="file" id="profile-photo" name="profile-photo" accept="image/*" required>
-                    <p>Click to upload or drag and drop</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Section 2: Location & Cultural Roots -->
-        <section>
-            <h2><span class="emoji">🌍</span> Location & Cultural Roots</h2>
-            <p class="section-intro">"Where you are — and where you feel you belong — helps us connect the dots."</p>
-            
-            <div class="form-group">
-                <label for="current-country">Current Country <span class="required">*</span></label>
-                <select id="current-country" name="current-country" required>
-                    <option value="">Select your country</option>
-                    <!-- Countries would be populated here -->
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="city-region">City or Region <span class="required">*</span></label>
-                <input type="text" id="city-region" name="city-region" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="origin">Country of Origin / Ancestral Identity</label>
-                <input type="text" id="origin" name="origin">
-            </div>
-            
-            <div class="form-group">
-                <label for="languages">Languages You Speak Fluently <span class="required">*</span></label>
-                <select id="languages" name="languages" multiple required>
-                    <option value="english">English</option>
-                    <option value="spanish">Spanish</option>
-                    <option value="french">French</option>
-                    <!-- More languages would be added -->
-                </select>
-                <small>Hold Ctrl/Cmd to select multiple</small>
-            </div>
-            
-            <div class="form-group">
-                <label for="timezone">Time Zone <span class="required">*</span></label>
-                <select id="timezone" name="timezone" required>
-                    <option value="">Select your time zone</option>
-                    <!-- Time zones would be populated here -->
-                </select>
-            </div>
-        </section>
-        
-        <!-- Section 3: Education & Life Work -->
-        <section>
-            <h2><span class="emoji">🎓</span> Education & Life Work</h2>
-            <p class="section-intro">"We value every kind of learning — formal or lived."</p>
-            
-            <div class="form-group">
-                <label for="education">Highest Level of Education <span class="required">*</span></label>
-                <select id="education" name="education" required>
-                    <option value="">Select your education level</option>
-                    <option value="none">No formal education</option>
-                    <option value="primary">Primary</option>
-                    <option value="secondary">Secondary</option>
-                    <option value="university">University</option>
-                    <option value="graduate">Graduate</option>
-                    <option value="self-taught">Self-Taught</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="profession">Current Profession or Role in Life <span class="required">*</span></label>
-                <input type="text" id="profession" name="profession" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="daily-rhythm">Typical Daily Rhythm <span class="required">*</span></label>
-                <select id="daily-rhythm" name="daily-rhythm" required>
-                    <option value="">Select your daily rhythm</option>
-                    <option value="flexible">Flexible</option>
-                    <option value="structured">Structured</option>
-                    <option value="unpredictable">Unpredictable</option>
-                </select>
-            </div>
-        </section>
-        
-        <!-- Section 4: Cultural Longing Statement -->
-        <section>
-            <h2><span class="emoji">🌏</span> Cultural Longing Statement</h2>
-            <p class="section-intro">"What culture, place, or identity calls out to you?"</p>
-            <p><em>Example: I'm white, but feel deeply connected to Afro-Caribbean traditions. Or I'm Chinese but feel a strong longing for African tribal storytelling.</em></p>
-            
-            <div class="form-group">
-                <label for="longing-statement">Statement <span class="required">*</span></label>
-                <textarea id="longing-statement" name="longing-statement" required></textarea>
-            </div>
-        </section>
-        
-        <!-- Section 5: Relationship Intention & Chosen Role -->
-        <section>
-            <h2><span class="emoji">💞</span> Relationship Intention & Chosen Role</h2>
-            <p class="section-intro">"What kind of belonging are you seeking — and offering?"</p>
-            
-            <div class="form-group">
-                <label>I am looking for <span class="required">*</span></label>
-                <div class="checkbox-group">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="looking-1" name="looking-for" value="emotional-kinship" required>
-                        <label for="looking-1">Emotional kinship</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="looking-2" name="looking-for" value="cultural-connection">
-                        <label for="looking-2">Cultural connection</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="looking-3" name="looking-for" value="spiritual-family">
-                        <label for="looking-3">Spiritual family</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="looking-4" name="looking-for" value="mentorship">
-                        <label for="looking-4">Mentorship</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="looking-5" name="looking-for" value="healing">
-                        <label for="looking-5">Healing</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label>I feel called to be <span class="required">*</span></label>
-                <div class="checkbox-group">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="role-1" name="called-to-be" value="spiritual-parent" required>
-                        <label for="role-1">Spiritual Parent</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="role-2" name="called-to-be" value="sibling-peer">
-                        <label for="role-2">Sibling/Peer</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="role-3" name="called-to-be" value="learner">
-                        <label for="role-3">Learner</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="role-4" name="called-to-be" value="quiet-companion">
-                        <label for="role-4">Quiet Companion</label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label>Preferred Connection Type <span class="required">*</span></label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="connection-1" name="connection-type" value="one-on-one" required>
-                        <label for="connection-1">One-on-One</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="connection-2" name="connection-type" value="small-group">
-                        <label for="connection-2">Small Group (3–6)</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="connection-3" name="connection-type" value="community-circle">
-                        <label for="connection-3">Community Circle (6–12)</label>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Section 6: Emotional Profile & Boundaries -->
-        <section>
-            <h2><span class="emoji">🧠</span> Emotional Profile & Boundaries</h2>
-            <p class="section-intro">"Knowing your emotional world helps us love you better."</p>
-            
-            <div class="form-group">
-                <label>Pick 3–5 Emotional Tags that describe you <span class="required">*</span></label>
-                <select id="emotional-tags" name="emotional-tags" multiple required>
-                    <option value="empathetic">Empathetic</option>
-                    <option value="curious">Curious</option>
-                    <option value="introspective">Introspective</option>
-                    <option value="joyful">Joyful</option>
-                    <option value="wounded">Wounded</option>
-                    <option value="playful">Playful</option>
-                    <option value="grounded">Grounded</option>
-                    <!-- More options would be added -->
-                </select>
-                <small>Select 3-5 options</small>
-            </div>
-            
-            <div class="form-group">
-                <label>What You Need Most from Others <span class="required">*</span></label>
-                <select id="needs" name="needs" multiple required>
-                    <option value="consistency">Consistency</option>
-                    <option value="laughter">Laughter</option>
-                    <option value="safe-space">Safe space</option>
-                    <option value="affirmation">Affirmation</option>
-                    <option value="deep-talk">Deep talk</option>
-                    <option value="shared-values">Shared values</option>
-                </select>
-                <small>Select 2-3 options</small>
-            </div>
-            
-            <div class="form-group">
-                <label>Your Boundaries <span class="required">*</span></label>
-                <div class="checkbox-group">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="boundary-1" name="boundaries" value="no-late-night" required>
-                        <label for="boundary-1">No late-night contact</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="boundary-2" name="boundaries" value="avoid-religion">
-                        <label for="boundary-2">Avoid religious topics</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="boundary-3" name="boundaries" value="no-romance">
-                        <label for="boundary-3">No romantic connections</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="boundary-4" name="boundaries" value="respect-culture">
-                        <label for="boundary-4">Must respect cultural history</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="boundary-5" name="boundaries" value="custom">
-                        <label for="boundary-5">Custom boundary:</label>
-                        <input type="text" id="custom-boundary" name="custom-boundary">
-                    </div>
-                </div>
-                <small>Check at least 2 options</small>
-            </div>
-            
-            <div class="form-group">
-                <label>Preferred Communication Style <span class="required">*</span></label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="comm-1" name="communication" value="text" required>
-                        <label for="comm-1">Text</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="comm-2" name="communication" value="video">
-                        <label for="comm-2">Video</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="comm-3" name="communication" value="audio">
-                        <label for="comm-3">Audio</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="comm-4" name="communication" value="scheduled-calls">
-                        <label for="comm-4">Scheduled calls</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="comm-5" name="communication" value="written-letters">
-                        <label for="comm-5">Written letters</label>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Section 7: Message to Your Future Family -->
-        <section>
-            <h2><span class="emoji">📝</span> Message to Your Future Family</h2>
-            <p class="section-intro">"Someone out there is waiting to feel what you feel. Let them hear your heart."</p>
-            
-            <div class="form-group">
-                <label for="message">Short Message <span class="required">*</span></label>
-                <textarea id="message" name="message" minlength="100" required placeholder="Dear future family, I hope you..."></textarea>
-                <small>Minimum 100 characters</small>
-            </div>
-            
-            <div class="form-group">
-                <label>Upload one of the following <span class="required">*</span></label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="upload-type-1" name="upload-type" value="voice" required>
-                        <label for="upload-type-1">Voice message</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="upload-type-2" name="upload-type" value="photo">
-                        <label for="upload-type-2">Photo</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="upload-type-3" name="upload-type" value="symbol">
-                        <label for="upload-type-3">Symbol (image)</label>
-                    </div>
-                </div>
-                
-                <div class="upload-box">
-                    <input type="file" id="family-upload" name="family-upload" required>
-                    <p>Click to upload your selected item</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Submit Section -->
-        <section class="submit-section">
-            <button type="submit" id="submit-btn" disabled>Create My Belonging Profile →</button>
-        </section>
-        
-        <div class="closing-reminder">
-            "Every answer matters. This is not a form — it's the doorway to your chosen family. Your truth builds a new world."
-        </div>
-    </form>
+        </nav>
+    </div>
+</header>
 
-    <script>
-        // Simple form validation to enable submit button when all required fields are filled
-        document.getElementById('belonging-form').addEventListener('input', function() {
-            let allFilled = true;
-            const requiredFields = document.querySelectorAll('[required]');
-            
-            requiredFields.forEach(field => {
-                if (field.type === 'checkbox' || field.type === 'radio') {
-                    const name = field.name;
-                    const checked = document.querySelectorAll(`input[name="${name}"]:checked`).length > 0;
-                    if (!checked) allFilled = false;
-                } else if (!field.value) {
-                    allFilled = false;
-                }
-            });
-            
-            // Special validation for emotional tags (3-5)
-            const emotionalTags = document.getElementById('emotional-tags');
-            if (emotionalTags.selectedOptions.length < 3 || emotionalTags.selectedOptions.length > 5) {
-                allFilled = false;
-            }
-            
-            // Special validation for needs (2-3)
-            const needs = document.getElementById('needs');
-            if (needs.selectedOptions.length < 2 || needs.selectedOptions.length > 3) {
-                allFilled = false;
-            }
-            
-            // Special validation for boundaries (at least 2)
-            const boundaries = document.querySelectorAll('input[name="boundaries"]:checked');
-            if (boundaries.length < 2) {
-                allFilled = false;
-            }
-            
-            document.getElementById('submit-btn').disabled = !allFilled;
-        });
-    </script>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Join Hope Charity </h1>
+                <p class="page-subtitle">Become part of our global community working to create lasting change through education, healthcare, and community development.</p>
+            </div>
+
+            <div class="registration-container">
+                <div class="form-header">
+                    <h2>Registration Form</h2>
+                    <p>Complete the form below to register as a volunteer, donor, or partner</p>
+                    
+                    <div class="form-progress">
+                        <div class="progress-bar" id="progressBar"></div>
+                        <div class="progress-step completed" data-step="1">
+                            <span class="progress-label">Personal Info</span>
+                        </div>
+                        <div class="progress-step active" data-step="2">
+                            <span class="progress-label">Account Details</span>
+                        </div>
+                        <div class="progress-step" data-step="3">
+                            <span class="progress-label">Areas of Interest</span>
+                        </div>
+                        <div class="progress-step" data-step="4">
+                            <span class="progress-label">Review</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-body">
+                    <!-- Step 1: Personal Information -->
+                    <div class="form-step active" data-step="1">
+                        <h3 class="step-title">Personal Information</h3>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName" class="required">Full Name</label>
+                                <input type="text" id="firstName" class="form-control" required>
+                                <span class="error-message">Please enter your first name</span>
+                            </div>
+                            
+                            
+                            <div class="form-group">
+                                <label for="email" class="required">Email Address</label>
+                                <input type="email" id="email" class="form-control" required>
+                                <span class="error-message">Please enter a valid email address</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control">
+                                <span class="error-message">Please enter a valid phone number</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="dob" class="required">Date of Birth</label>
+                                <input type="date" id="dob" class="form-control" required>
+                                <span class="error-message">Please enter your date of birth</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <div class="select-wrapper">
+                                    <select id="gender" class="form-control">
+                                        <option value="">Select gender</option>
+                                        <option value="female">Female</option>
+                                        <option value="male">Male</option>
+                                        <option value="non-binary">Non-binary</option>
+                                        <option value="other">Other</option>
+                                        <option value="prefer-not-to-say">Prefer not to say</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="address">Street Address</label>
+                                <input type="text" id="address" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="state">State/Province</label>
+                                <input type="text" id="state" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="zip">ZIP/Postal Code</label>
+                                <input type="text" id="zip" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <div class="select-wrapper">
+                                    <select id="country" class="form-control">
+                                        <option value="">Select country</option>
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="AU">Australia</option>
+                                        <!-- More countries would be added here -->
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" disabled>Previous</button>
+                            <button type="button" class="btn btn-primary next-step">Next: Account Details</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Account Details -->
+                    <div class="form-step" data-step="2">
+                        <h3 class="step-title">Account Details</h3>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="username" class="required">Username</label>
+                                <input type="text" id="username" class="form-control" required>
+                                <span class="error-message">Please choose a username</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password" class="required">Password</label>
+                                <input type="password" id="password" class="form-control" required>
+                                <span class="error-message">Password must be at least 8 characters</span>
+                                <small class="hint">Minimum 8 characters with at least 1 number and 1 special character</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword" class="required">Confirm Password</label>
+                                <input type="password" id="confirmPassword" class="form-control" required>
+                                <span class="error-message">Passwords do not match</span>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label class="required">Registration Type</label>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" id="typeVolunteer" name="registrationType" value="volunteer" required checked>
+                                        <label for="typeVolunteer">Volunteer</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="typeDonor" name="registrationType" value="donor" required>
+                                        <label for="typeDonor">Donor</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="typePartner" name="registrationType" value="partner" required>
+                                        <label for="typePartner">Corporate/Organization Partner</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group full-width" id="organizationField" style="display: none;">
+                                <label for="organizationName" class="required">Organization Name</label>
+                                <input type="text" id="organizationName" class="form-control">
+                                <span class="error-message">Please enter your organization name</span>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label>How did you hear about us?</label>
+                                <div class="select-wrapper">
+                                    <select id="referralSource" class="form-control">
+                                        <option value="">Select an option</option>
+                                        <option value="social-media">Social Media</option>
+                                        <option value="friend-family">Friend or Family</option>
+                                        <option value="web-search">Web Search</option>
+                                        <option value="event">Event</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                            <button type="button" class="btn btn-primary next-step">Next: Areas of Interest</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Areas of Interest -->
+                    <div class="form-step" data-step="3">
+                        <h3 class="step-title">Areas of Interest</h3>
+                        
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label class="required">Which programs are you interested in?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" id="interestEducation" name="programInterests" value="education">
+                                        <label for="interestEducation">Education Access</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" id="interestHealthcare" name="programInterests" value="healthcare">
+                                        <label for="interestHealthcare">Healthcare Services</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" id="interestDevelopment" name="programInterests" value="development">
+                                        <label for="interestDevelopment">Community Development</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" id="interestDisaster" name="programInterests" value="disaster-relief">
+                                        <label for="interestDisaster">Disaster Relief</label>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input type="checkbox" id="interestWomen" name="programInterests" value="women-empowerment">
+                                        <label for="interestWomen">Women's Empowerment</label>
+                                    </div>
+                                </div>
+                                <span class="error-message">Please select at least one area of interest</span>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label>Skills & Expertise</label>
+                                <textarea id="skills" class="form-control" rows="4" placeholder="Please list any relevant skills or expertise you have that could contribute to our programs"></textarea>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label class="required">Availability</label>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" id="availabilityFull" name="availability" value="full-time" required>
+                                        <label for="availabilityFull">Full Time</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="availabilityPart" name="availability" value="part-time" required>
+                                        <label for="availabilityPart">Part Time</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="availabilityFlex" name="availability" value="flexible" required checked>
+                                        <label for="availabilityFlex">Flexible/As Needed</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label>Previous Volunteer Experience</label>
+                                <textarea id="volunteerExp" class="form-control" rows="4" placeholder="Describe any previous volunteer experience you have"></textarea>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="commitment">Expected Commitment Duration</label>
+                                <div class="select-wrapper">
+                                    <select id="commitment" class="form-control">
+                                        <option value="">Select duration</option>
+                                        <option value="3-months">3 months</option>
+                                        <option value="6-months">6 months</option>
+                                        <option value="1-year">1 year</option>
+                                        <option value="long-term">Long-term</option>
+                                        <option value="unsure">Unsure</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                            <button type="button" class="btn btn-primary next-step">Next: Review Information</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: Review Information -->
+                    <div class="form-step" data-step="4">
+                        <h3 class="step-title">Review Your Information</h3>
+                        
+                        <div class="summary-item">
+                            <div class="summary-title">
+                                <span>Personal Information</span>
+                                <span class="summary-edit" data-step="1">Edit</span>
+                            </div>
+                            <div class="summary-content" id="personalSummary">
+                                <!-- Filled by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <div class="summary-title">
+                                <span>Account Details</span>
+                                <span class="summary-edit" data-step="2">Edit</span>
+                            </div>
+                            <div class="summary-content" id="accountSummary">
+                                <!-- Filled by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <div class="summary-title">
+                                <span>Areas of Interest</span>
+                                <span class="summary-edit" data-step="3">Edit</span>
+                            </div>
+                            <div class="summary-content" id="interestsSummary">
+                                <!-- Filled by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="termsAgree" required>
+                                <label for="termsAgree" class="required">I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a></label>
+                            </div>
+                            <span class="error-message">You must agree to the terms to continue</span>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="newsletterOptIn">
+                                <label for="newsletterOptIn">Subscribe to our newsletter for updates and opportunities</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                            <button type="submit" class="btn btn-primary" id="submitForm">Submit Registration</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Success Message (hidden initially) -->
+                    <div class="success-message">
+                        <div class="success-icon">✓</div>
+                        <h3 class="success-title">Registration Successful!</h3>
+                        <p class="success-text">Thank you for registering with Hope Foundation. We've sent a confirmation email to your address. Our team will review your application and contact you shortly.</p>
+                        <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hope Charity Org</h3>
+                <p>Dedicated to creating lasting positive change in communities worldwide through sustainable development programs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="programs.html">Programs</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="register.html">Register</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@hopecharity.org</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Hope Street, Global City</p>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <p><a href="attributions.html">Attributions</a></p>
+                <p><a href="#annual-report">Annual Report</a></p>
+                <p><a href="#newsletter">Newsletter</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hope Charity Org. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/register.js"> </script>
 </body>
 </html>

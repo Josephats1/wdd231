@@ -1,209 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DearLove | Find Your Chosen Family</title>
-  <meta name="description" content="Connect with your emotional kin through safe, meaningful relationships">
-  <style>
-    /* === BASE STYLES === */
-    :root {
-      --pink: #ff6b6b;
-      --purple: #5f27cd;
-      --dark: #1a1a2e;
-      --light: #f8f9fa;
-    }
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      background: var(--light);
-      color: var(--dark);
-      transition: all 0.3s ease;
-    }
-    [data-theme="dark"] body {
-      background: var(--dark);
-      color: var(--light);
-    }
-
-    /* === ANIMATED HEADER === */
-    header {
-      background: rgba(255,255,255,0.9);
-      padding: 1rem;
-      position: fixed;
-      width: 100%;
-      animation: fadeInDown 0.8s;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* === HERO WITH FLOATING EFFECT === */
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(135deg, var(--pink), var(--purple));
-      color: white;
-      overflow: hidden;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-
-    /* === ANIMATED FEATURE CARDS === */
-    .features {
-      padding: 4rem 1rem;
-    }
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .feature-card {
-      background: white;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-    }
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    }
-
-    /* === TESTIMONIAL TYPING EFFECT === */
-    .testimonial {
-      height: 100px;
-      font-size: 1.5rem;
-      text-align: center;
-    }
-    #typing-text {
-      border-right: 2px solid var(--pink);
-      animation: blink 0.5s step-end infinite;
-    }
-    @keyframes blink {
-      from, to { border-color: transparent; }
-      50% { border-color: var(--pink); }
-    }
-
-    /* === DARK MODE TOGGLE === */
-    .theme-toggle {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    /* === RESPONSIVE DESIGN === */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hope Foundation - Transforming lives through education, healthcare, and community development programs worldwide.">
+    <meta name="author" content="Hope Foundation Team">
+    <meta property="og:title" content="Hope Foundation - Making a Difference">
+    <meta property="og:description" content="Join us in transforming lives through education, healthcare, and community development programs worldwide.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hopefoundation.org">
+    <title>Hope Charity Org- Home</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ff6b35'/%3E%3Cpath d='M30 40 Q50 20 70 40 Q50 60 30 40' fill='white'/%3E%3C/svg%3E">
+   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/family">Family</a>
-      <button class="theme-toggle">🌙</button>
-    </nav>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div>
-      <h1>Choose Your Family. Choose Your Belonging.</h1>
-      <p>A safe space to form the family your heart needs</p>
-      <a href="/register" style="color: white;">Find Your Family →</a>
+    <header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">H</div>
+            Hope Charity Org
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html" class="register-btn" id="registerBtn">Register</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </div>
-  </section>
+</header>
 
-  <!-- FEATURES -->
-  <section class="features">
-    <h2 style="text-align: center;">How It Works</h2>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <h3>Emotional DNA</h3>
-        <p>Discover your perfect matches</p>
-      </div>
-      <div class="feature-card">
-        <h3>Family Contracts</h3>
-        <p>Define your commitments</p>
-      </div>
-    </div>
-  </section>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Transforming Lives, Building Hope</h1>
+                <p>Join us in creating lasting change through education, healthcare, and community development programs that reach communities worldwide.</p>
+                <div class="cta-buttons">
+                    <a href="programs.html" class="btn btn-primary">Explore Programs</a>
+                    <a href="#" class="btn btn-secondary" id="donateBtn">Make a Donation</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- TESTIMONIAL -->
-  <div class="testimonial">
-    <p id="typing-text"></p>
-  </div>
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="15000">0</div>
+                        <div class="stat-label">Lives Impacted</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="45">0</div>
+                        <div class="stat-label">Countries Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="180">0</div>
+                        <div class="stat-label">Active Programs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">Success Rate </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
 
-  <script>
-    // === DARK MODE TOGGLE ===
-    const toggle = document.querySelector('.theme-toggle');
-    toggle.addEventListener('click', () => {
-      document.documentElement.setAttribute('data-theme', 
-        document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
-      );
-      toggle.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
-    });
+        <section class="programs-preview">
+            <div class="container">
+                <h2 class="section-title">Our Impact Areas</h2>
+                <p class="section-subtitle">We focus on sustainable solutions that address the root causes of poverty and inequality.</p>
+                <div class="programs-grid">
+                    <div class="program-card" data-program="education">
+                        <div class="program-image">📚</div>
+                        <div class="program-content">
+                            <h3 class="program-title">Education Access</h3>
+                            <p class="program-description">Providing quality education opportunities to underserved communities through schools, scholarships, and digital learning platforms.</p>
+                        </div>
+                    </div>
+                    <div class="program-card" data-program="healthcare">
+                        <div class="program-image">🏥</div>
+                        <div class="program-content">
+                            <h3 class="program-title">Healthcare Services</h3>
+                            <p class="program-description">Delivering essential medical care, preventive health programs, and health education to remote and vulnerable populations.</p>
+                        </div>
+                    </div>
+                    <div class="program-card" data-program="development">
+                        <div class="program-image">🏘️</div>
+                        <div class="program-content">
+                            <h3 class="program-title">Community Development</h3>
+                            <p class="program-description">Building sustainable infrastructure, supporting local economies, and empowering communities to become self-sufficient.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    // === TYPING EFFECT ===
-    const messages = [
-      "I found my chosen brother in Brazil...",
-      "After years alone, I have a family now..."
-    ];
-    let i = 0, j = 0;
-    function typeWriter() {
-      if (j < messages[i].length) {
-        document.getElementById('typing-text').textContent += messages[i].charAt(j);
-        j++;
-        setTimeout(typeWriter, 50);
-      } else {
-        setTimeout(eraseText, 2000);
-      }
-    }
-    function eraseText() {
-      if (j > 0) {
-        document.getElementById('typing-text').textContent = messages[i].substring(0, j-1);
-        j--;
-        setTimeout(eraseText, 30);
-      } else {
-        i = (i + 1) % messages.length;
-        setTimeout(typeWriter, 500);
-      }
-    }
-    typeWriter();
+        <section class="data-section">
+            <div class="container">
+                <h2 class="section-title">Recent Success Stories</h2>
+                <p class="section-subtitle">Real stories from communities we've helped transform</p>
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Loading success stories...</p>
+                </div>
+                <div class="data-grid" id="dataGrid"></div>
+            </div>
+        </section>
+    </main>
 
-    // === ANIMATE CARDS ON SCROLL ===
-    const cards = document.querySelectorAll('.feature-card');
-    function checkCards() {
-      cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        if (cardTop < window.innerHeight - 100) {
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }
-      });
-    }
-    cards.forEach(card => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(20px)';
-      card.style.transition = 'all 0.6s ease';
-    });
-    window.addEventListener('scroll', checkCards);
-    checkCards(); // Run once on load
-  </script>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hope Charity Org</h3>
+                <p>Dedicated to creating lasting positive change in communities worldwide through sustainable development programs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="programs.html">Programs</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <li><a href="register.html" class="register-btn" id="registerBtn">Register</a></li>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@hopecharity.org</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Hope Street, Global City</p>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <p><a href="attributions.html">Attributions</a></p>
+                <p><a href="#annual-report">Annual Report</a></p>
+                <p><a href="#newsletter">Newsletter</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hope Charity Org. All rights reserved.</p>
+        </div>
+    </footer>
+<script src="scripts/main.js">
+</script>
 </body>
 </html>

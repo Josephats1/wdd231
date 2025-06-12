@@ -3,54 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Jerry Fly Charity's mission, vision, and team.">
-    <meta name="author" content="Jerry Fly Charity">
-    <title>About Us | Jerry Fly Charity</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="About Hope Foundation - Learn about our mission, vision, history, and the team behind our global impact initiatives.">
+    <meta name="author" content="Hope Foundation Team">
+    <meta property="og:title" content="About Hope Foundation - Our Story and Mission">
+    <meta property="og:description" content="Discover the history, values, and people behind Hope Foundation's global initiatives in education, healthcare, and community development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hopefoundation.org/about">
+    <title>Hope Foundation - About Us</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23ff6b35'/%3E%3Cpath d='M30 40 Q50 20 70 40 Q50 60 30 40' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/about.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Jerry Fly Charity Logo" width="50" height="50">
-            <h1>Jerry Fly Charity</h1>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">H</div>
+                Hope Charity
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="register.html" class="register-btn" id="registerBtn">Register</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
         </div>
-        <nav>
-            <button class="hamburger" aria-label="Menu">☰</button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <section class="about-mission">
-            <h2>Our Mission</h2>
-            <p>To provide education, healthcare, and opportunities for children with disabilities worldwide.</p>
-        </section>
-
-        <section class="team">
-            <h2>Our Team</h2>
-            <div class="team-members" id="teamMembers">
-                <!-- Loaded via JavaScript -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1 class="page-title">Our Story</h1>
+                    <p class="page-subtitle">For over 15 years, Hope Foundation has been transforming lives through sustainable solutions in education, healthcare, and community development across the globe.</p>
+                </div>
             </div>
         </section>
 
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:contact@jerryflycharity.org">contact@jerryflycharity.org</a></p>
-            <p>Phone: (123) 456-7890</p>
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">Who We Are</h2>
+                <p class="section-subtitle">Hope Foundation is a global nonprofit organization dedicated to creating lasting change in underserved communities through innovative, sustainable programs.</p>
+                
+                <div class="mission-vision">
+                    <div class="mission-card">
+                        <div class="mission-icon">🎯</div>
+                        <h3 class="mission-title">Our Mission</h3>
+                        <p class="mission-text">To empower individuals and communities by providing access to quality education, healthcare, and economic opportunities, breaking the cycle of poverty and creating sustainable futures.</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <div class="vision-icon">🔭</div>
+                        <h3 class="vision-title">Our Vision</h3>
+                        <p class="vision-text">A world where every person, regardless of circumstance, has the opportunity to thrive through education, health, and economic security.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="history-section">
+            <div class="container">
+                <h2 class="section-title">Our Journey</h2>
+                <p class="section-subtitle">From humble beginnings to global impact, our story is one of hope, perseverance, and transformation.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2008</div>
+                            <h3 class="timeline-title">Foundation Established</h3>
+                            <p class="timeline-desc">Founded by Dr. Sarah Johnson and a group of passionate volunteers with a mission to bring hope to underserved communities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2010</div>
+                            <h3 class="timeline-title">First School Built</h3>
+                            <p class="timeline-desc">Completed our first school in Kenya, providing education to 200 children in a rural community.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2013</div>
+                            <h3 class="timeline-title">Healthcare Initiative</h3>
+                            <p class="timeline-desc">Launched mobile health clinics to serve remote areas in Guatemala and Honduras.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2016</div>
+                            <h3 class="timeline-title">Global Expansion</h3>
+                            <p class="timeline-desc">Expanded operations to Asia with clean water projects in Bangladesh and education programs in India.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2020</div>
+                            <h3 class="timeline-title">Pandemic Response</h3>
+                            <p class="timeline-desc">Mobilized emergency relief efforts to provide food, medicine, and education support during COVID-19.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023</div>
+                            <h3 class="timeline-title">150,000 Lives Impacted</h3>
+                            <p class="timeline-desc">Reached the milestone of serving over 150,000 beneficiaries across 45 countries worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+             <!-- BOARD MEMBERS-->
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">Passionate professionals dedicated to making a difference in communities around the world.</p>
+                
+                <div class="team-grid" id="teamGrid">
+                    <!-- Team members will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="container">
+                <h2 class="section-title">Our Core Values</h2>
+                <p class="section-subtitle">These principles guide everything we do at Hope Foundation</p>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">❤️</div>
+                        <h3 class="value-title">Compassion</h3>
+                        <p class="value-desc">We approach every challenge with empathy and understanding, putting people at the center of all we do.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h3 class="value-title">Integrity</h3>
+                        <p class="value-desc">We maintain the highest ethical standards, ensuring transparency and accountability in all our actions.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🌱</div>
+                        <h3 class="value-title">Sustainability</h3>
+                        <p class="value-desc">We create solutions that last, empowering communities to maintain progress long after our direct involvement.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">🌍</div>
+                        <h3 class="value-title">Inclusivity</h3>
+                        <p class="value-desc">We believe in equal opportunities for all, regardless of gender, race, religion, or background.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">💡</div>
+                        <h3 class="value-title">Innovation</h3>
+                        <p class="value-desc">We constantly seek creative solutions to complex problems, adapting to changing needs and circumstances.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">✨</div>
+                        <h3 class="value-title">Hope</h3>
+                        <p class="value-desc">We believe in the power of hope to transform lives and communities, even in the most challenging circumstances.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners-section">
+            <div class="container">
+                <h2 class="section-title">Our Partners</h2>
+                <p class="section-subtitle">Collaborating with organizations that share our vision for a better world</p>
+                
+                <div class="partners-grid">
+                    <div class="partner-logo">
+                        <img src="https://img.freepik.com/free-vector/world-water-day-event_23-2148832407.jpg?ga=GA1.1.1077445688.1745748977&semt=ais_items_boosted&w=740" alt="Global Aid">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/150x60?text=Education+First" alt="Education First">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/150x60?text=Health+Initiative" alt="Health Initiative">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/150x60?text=Future+Fund" alt="Future Fund">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/150x60?text=United+Hope" alt="United Hope">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/150x60?text=Community+Builders" alt="Community Builders">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Join Our Movement</h2>
+                    <p class="cta-text">Become part of the Hope Foundation family and help us create lasting change in communities around the world.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary" id="ctaRegisterBtn">Volunteer With Us</a>
+                        <a href="#" class="btn btn-secondary">Make a Donation</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+
     <footer>
-        <p>&copy; 2023 Jerry Fly Charity. All rights reserved.</p>
-        <p><a href="attributions.html">Attributions</a></p>
-        <p><a href="https://youtu.be/example-video" target="_blank">View Project Video</a></p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hope Foundation</h3>
+                <p>Dedicated to creating lasting positive change in communities worldwide through sustainable development programs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="programs.html">Programs</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="#attributions">Attributions</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@hopecharity.org</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Hope Street, Global City</p>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <p><a href="attributions.html">Attributions</a></p>
+                <p><a href="#annual-report">Annual Report</a></p>
+                <p><a href="#newsletter">Newsletter</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hope Charity Org. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="scripts/about.js" type="module"></script>
+    <script src="scripts/about.js"> </script>
 </body>
 </html>
