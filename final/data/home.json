@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "N. Josephine",
+    "position": "Director of Programs",
+    "bio": "Josephine oversees all program implementation with expertise in education and community development across three continents.",
+    "emoji": "👩‍⚕️"
+  },
+  {
+    "id": 2,
+    "name": "Baluku Josephat",
+    "position": "Founder & CEO",
+    "bio": "With over 20 years of experience in international development, Baluku founded Hope Foundation to create sustainable solutions to global challenges.",
+    "emoji": "👨‍💼"
+  }
+]

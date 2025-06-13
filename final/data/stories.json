@@ -1,17 +1,51 @@
-[
-    {
-        "id": "story1",
-        "title": "Maria's Journey",
-        "summary": "How Maria gained mobility through our prosthetics program"
-    },
-    {
-        "id": "story2",
-        "title": "Ahmed's Education",
-        "summary": "Ahmed's success in our special education program"
-    },
-    {
-        "id": "story3",
-        "title": "Community Transformation",
-        "summary": "How we helped build an accessible playground"
-    }
-]
+ const successStories = [
+        {
+            "title": "School Building in Kenya",
+            "location": "Nairobi, Kenya",
+            "impact": 75,
+            "description": "Built a new school serving 300 children in an underserved community, with a 75% improvement in literacy rates within the first year.",
+            "completed": true
+        },
+        {
+            "title": "Medical Clinic in Guatemala",
+            "location": "Guatemala City, Guatemala",
+            "impact": 82,
+            "description": "Established a mobile medical clinic that provides free healthcare to rural communities, serving over 1,200 patients monthly.",
+            "completed": true
+        },
+        {
+            "title": "Clean Water Initiative",
+            "location": "Dhaka, Bangladesh",
+            "impact": 90,
+            "description": "Installed clean water systems in 15 villages, reducing waterborne illnesses by 90% in the region.",
+            "completed": true
+        },
+        {
+            "title": "Women's Entrepreneurship",
+            "location": "Delhi, India",
+            "impact": 65,
+            "description": "Trained 150 women in business skills, resulting in 65% of participants starting sustainable small businesses.",
+            "completed": true
+        },
+        {
+            "title": "Agricultural Training",
+            "location": "Lagos, Nigeria",
+            "impact": 70,
+            "description": "Provided modern farming techniques to local farmers, increasing crop yields by 70% on average.",
+            "completed": true
+        },
+        {
+            "title": "Digital Literacy Program",
+            "location": "Manila, Philippines",
+            "impact": 80,
+            "description": "Taught computer skills to 500 underprivileged youth, with 80% securing better employment opportunities.",
+            "completed": true
+        },
+        {
+            "title": "Disaster Relief",
+            "location": "Port-au-Prince, Haiti",
+            "impact": 85,
+            "description": "Provided emergency aid to 2,000 families affected by the hurricane, rebuilding 150 homes.",
+            "completed": true
+        }
+    ];

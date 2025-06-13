@@ -118,13 +118,27 @@
                 });
             });
 
-            // Form submission
-            const form = document.getElementById('registrationForm');
-            if (form) {
-                form.addEventListener('submit', (e) => {
-                    this.handleFormSubmission(e);
-                });
-            }
+         document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('submit');
+    const successMessage = document.querySelector('.success-message');
+
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent actual form submission
+
+            // Optional: Validate or process form data here
+
+            // Hide form
+            form.style.display = 'none';
+
+            // Show success message
+            successMessage.style.display = 'block';
+            successMessage.classList.add('show');
+
+        });
+    }
+});
+
         }
 
         setupNavigation() {

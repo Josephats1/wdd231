@@ -191,7 +191,7 @@
             background: var(--white);
             padding: 2rem 0;
             border-bottom: 1px solid #eee;
-            position: sticky;
+        
             top: 80px;
             z-index: 100;
         }
