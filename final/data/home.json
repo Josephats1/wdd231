@@ -1,16 +1,44 @@
 [
-  {
-    "id": 1,
-    "name": "N. Josephine",
-    "position": "Director of Programs",
-    "bio": "Josephine oversees all program implementation with expertise in education and community development across three continents.",
-    "emoji": "👩‍⚕️"
-  },
-  {
-    "id": 2,
-    "name": "Baluku Josephat",
-    "position": "Founder & CEO",
-    "bio": "With over 20 years of experience in international development, Baluku founded Hope Foundation to create sustainable solutions to global challenges.",
-    "emoji": "👨‍💼"
-  }
+    {
+        "id": 1,
+        "name": "N. Josephine",
+        "position": "Director of Programs",
+        "bio": "Josephine oversees all program implementation with expertise in education and community development across three continents.",
+        "emoji": "👩‍⚕️"
+    },
+    {
+        "id": 2,
+        "name": "Baluku Josephats",
+        "position": "Founder & CEO",
+        "bio": "With over 20 years of experience in international development, Baluku founded Hope Foundation to create sustainable solutions to global challenges.",
+        "emoji": "👨‍💼"
+    },
+    {
+        "id": 3,
+        "name": "Amina Diallo",
+        "position": "Healthcare Coordinator",
+        "bio": "Amina leads our medical initiatives in West Africa, bringing 15 years of public health experience to the team.",
+        "emoji": "👩‍⚕️"
+    },
+    {
+        "id": 4,
+        "name": "David Rodriguez",
+        "position": "Education Specialist",
+        "bio": "David develops our school curricula and teacher training programs with a focus on digital literacy.",
+        "emoji": "👨‍🏫"
+    },
+    {
+        "id": 5,
+        "name": "Priya Patel",
+        "position": "Finance Director",
+        "bio": "Priya ensures financial transparency and accountability across all our operations worldwide.",
+        "emoji": "👩‍💻"
+    },
+    {
+        "id": 6,
+        "name": "James Okon",
+        "position": "Field Operations",
+        "bio": "James manages our on-the-ground teams in East Africa, coordinating logistics and community partnerships.",
+        "emoji": "👨‍🔧"
+    }
 ]
