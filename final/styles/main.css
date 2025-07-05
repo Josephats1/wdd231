@@ -610,6 +610,11 @@ h1 {
         font-size: 2rem;
     }
 }
+@media (max-width: 568px) {
+    .hero-title {
+        font-size: 1rem;
+    }
+}
 /* Complete heading system */
 :where(h1, h2, h3, h4, h5, h6) {
     font-family: "Roboto Condensed", sans-serif;
@@ -624,3 +629,25 @@ h3 { font-size: clamp(1.5rem, 3.5vw, 2rem); }
 h4 { font-size: clamp(1.3rem, 3vw, 1.5rem); }
 h5 { font-size: 1.2rem; }
 h6 { font-size: 1rem; }
+
+/* Lazy loading styles */
+.story-image {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  
+    transition: opacity 0.3s ease;
+}
+
+.story-image.lazy {
+    opacity: 0;
+}
+
+.story-image.loaded {
+    opacity: 1;
+}
+
+/* Prevent layout shifts */
+.data-item {
+    min-height: 400px; /* Adjust based on your content */
+}
